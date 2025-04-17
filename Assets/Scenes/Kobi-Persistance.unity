@@ -566,11 +566,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef0f7c730bcc2e143966db34af492ef0, type: 3}
+--- !u!114 &1593144317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9105448333186986948, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+  m_PrefabInstance: {fileID: 3682825569379342278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc703d99cf9084b41904f3af7a23e602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2095201352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6319283468207384559, guid: cc051f7ee64bcc1448cf01c5082e31b7, type: 3}
   m_PrefabInstance: {fileID: 4810474995070015604}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3682825569379342278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876003218904594588, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150330567973498683, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+      propertyPath: m_Name
+      value: Bird
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
 --- !u!1001 &4563653317316743461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -859,38 +927,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2283739153150464418, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
-      propertyPath: m_Layer
-      value: 6
+    - target: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: shotForce
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
-      propertyPath: slingShotArea
+      propertyPath: birdPosOffset
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: birdLaunchPrefab
       value: 
-      objectReference: {fileID: 5472480560029198097}
+      objectReference: {fileID: 1593144317}
     - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: m_Name
       value: NewSlingShot
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138076998264688331, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
-      propertyPath: slingshotAreaMask.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
---- !u!114 &5472480560029198097 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9138076998264688331, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
-  m_PrefabInstance: {fileID: 5472480560029198096}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 039bd69c6cddf5b42953301df9eaa7a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -902,3 +959,4 @@ SceneRoots:
   - {fileID: 1552985797}
   - {fileID: 566345697}
   - {fileID: 5472480560029198096}
+  - {fileID: 3682825569379342278}
