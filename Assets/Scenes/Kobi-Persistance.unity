@@ -859,15 +859,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2283739153150464418, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: slingShotArea
+      value: 
+      objectReference: {fileID: 5472480560029198097}
     - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: m_Name
       value: NewSlingShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138076998264688331, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: slingshotAreaMask.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+--- !u!114 &5472480560029198097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9138076998264688331, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+  m_PrefabInstance: {fileID: 5472480560029198096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 039bd69c6cddf5b42953301df9eaa7a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

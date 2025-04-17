@@ -7,10 +7,16 @@ public class SlingShot : MonoBehaviour
     //This script should be the same as the one used for slingshot movement, attached to the slingshot gameobject
     [SerializeField] public LineRenderer leftLineRenderer;
     [SerializeField] public LineRenderer rightLineRenderer;
-    public Transform slingshotStartPosition;
     public Bird activeBird;
     public Transform leftStartPosition;
     public Transform rightStartPosition;
+
+    [SerializeField] private float maxDistance = 3.5f;
+    [SerializeField] private Transform centerPosition;
+    [SerializeField] private Transform idlePosition;
+    [SerializeField] private SlingShotArea slingShotArea;
+    private Vector2 slingShotLinesPosition;
+    private bool clickedWithinArea;
 
     void Start()
     {
@@ -19,10 +25,18 @@ public class SlingShot : MonoBehaviour
     }
     private void Update()
     {
-        if(Mouse.current.leftButton.isPressed)
+        if(Mouse.current.leftButton.wasPressedThisFrame && slingShotArea.IsWithinSlingshotArea())
+        {
+            clickedWithinArea = true;
+        }
+        if(Mouse.current.leftButton.isPressed && clickedWithinArea)
         {
             Debug.Log("left mouse pressed");
             DrawSlingshot();
+        }
+        if(Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            clickedWithinArea = false;
         }
     }
 
@@ -36,7 +50,8 @@ public class SlingShot : MonoBehaviour
     private void DrawSlingshot()
     {
         Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        SetLines(touchPosition);
+        slingShotLinesPosition = centerPosition.position + Vector3.ClampMagnitude(touchPosition - centerPosition.position, maxDistance);
+        SetLines(slingShotLinesPosition);
     }
 
     private void SetLines(Vector2 position)
