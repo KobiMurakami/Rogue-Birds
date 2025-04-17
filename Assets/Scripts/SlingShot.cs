@@ -5,25 +5,33 @@ using System.Collections;
 public class SlingShot : MonoBehaviour
 {
     //This script should be the same as the one used for slingshot movement, attached to the slingshot gameobject
+    [Header("Line Renderers")]
     [SerializeField] public LineRenderer leftLineRenderer;
     [SerializeField] public LineRenderer rightLineRenderer;
-    public Bird activeBird;
+
+    [Header("Transform References")]
+    private Vector2 slingShotLinesPosition;
     public Transform leftStartPosition;
     public Transform rightStartPosition;
+    [SerializeField] private Transform centerPosition;
+    [SerializeField] private Transform idlePosition;
 
+    [Header("Slingshot settings")]
     [SerializeField] private float maxDistance = 3.5f;
 
     [SerializeField] private float shotForce = 5f;
-    [SerializeField] private Transform centerPosition;
-    [SerializeField] private Transform idlePosition;
-    [SerializeField] private SlingShotArea slingShotArea;
-    private Vector2 slingShotLinesPosition;
+    [SerializeField] private float respawnTime = 3f;
     private Vector2 direction;
     private Vector2 directionNormalized;
+    private bool birdOnSlingshot;
     private bool clickedWithinArea;
+
+    [SerializeField] private SlingShotArea slingShotArea;
     [SerializeField] private BirdLaunch birdLaunchPrefab;
     [SerializeField] private float birdPosOffset = 2f;
     private BirdLaunch spawnedBird;
+    public Bird activeBird;
+
 
     private void Awake()
     {
@@ -41,16 +49,18 @@ public class SlingShot : MonoBehaviour
         {
             clickedWithinArea = true;
         }
-        if(Mouse.current.leftButton.isPressed && clickedWithinArea)
+        if(Mouse.current.leftButton.isPressed && clickedWithinArea && birdOnSlingshot)
         {
             Debug.Log("left mouse pressed");
             DrawSlingshot();
             PositionAndRotateBird();
         }
-        if(Mouse.current.leftButton.wasReleasedThisFrame)
+        if(Mouse.current.leftButton.wasReleasedThisFrame && birdOnSlingshot)
         {
             clickedWithinArea = false;
             spawnedBird.LaunchBird(direction, shotForce);
+            birdOnSlingshot = false;
+            StartCoroutine(spawnBirdAfterTime());
         }
     }
 
@@ -86,11 +96,18 @@ public class SlingShot : MonoBehaviour
         Vector2 spawnPosition = (Vector2)idlePosition.position + dir * birdPosOffset;
         spawnedBird = Instantiate(birdLaunchPrefab, idlePosition.position, Quaternion.identity);
         spawnedBird.transform.right = dir;
+        birdOnSlingshot = true;
     }
 
     private void PositionAndRotateBird()
     {
         spawnedBird.transform.position = slingShotLinesPosition + directionNormalized * birdPosOffset;
         spawnedBird.transform.right = directionNormalized;
+    }
+
+    private IEnumerator spawnBirdAfterTime()
+    {
+        yield return new WaitForSeconds(respawnTime);
+        SpawnBird();
     }
 }
