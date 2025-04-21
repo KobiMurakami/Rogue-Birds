@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7936198955817090223}
   - component: {fileID: 5886069319576768173}
   - component: {fileID: 3652561058888542931}
-  - component: {fileID: 9105448333186986948}
+  - component: {fileID: -3387659799506037687}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 9150330567973498683}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.77, y: -2.1, z: 0}
+  m_LocalPosition: {x: -12.82, y: -5.38, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -153,7 +153,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &9105448333186986948
+--- !u!114 &-3387659799506037687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,6 +162,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9150330567973498683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc703d99cf9084b41904f3af7a23e602, type: 3}
+  m_Script: {fileID: 11500000, guid: 2777f2d2f9d265c4f9cd8f6d39a40f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  birdName: Bobby
+  mass: 1
+  speed: 1
+  isInMotion: 0

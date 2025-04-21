@@ -27,22 +27,18 @@ public class SlingShot : MonoBehaviour
     private bool clickedWithinArea;
 
     [SerializeField] private SlingShotArea slingShotArea;
-    [SerializeField] private BirdLaunch birdLaunchPrefab;
     [SerializeField] private float birdPosOffset = 2f;
-    private BirdLaunch spawnedBird;
+    
+    private Bird spawnedBird;
     public Bird activeBird;
 
+    
 
-    private void Awake()
+    private void Start()
     {
         SpawnBird();
     }
 
-    void Start()
-    {
-        //Not permanent code, shouldn't be in start prolly
-        activeBird = BirdBagManager.Instance.GetBirdForShooting();
-    }
     private void Update()
     {
         if(Mouse.current.leftButton.wasPressedThisFrame && slingShotArea.IsWithinSlingshotArea())
@@ -94,7 +90,9 @@ public class SlingShot : MonoBehaviour
         SetLines(idlePosition.position);
         Vector2 dir = (centerPosition.position - idlePosition.position).normalized;
         Vector2 spawnPosition = (Vector2)idlePosition.position + dir * birdPosOffset;
-        spawnedBird = Instantiate(birdLaunchPrefab, idlePosition.position, Quaternion.identity);
+        
+        activeBird = BirdBagManager.Instance.GetBirdForShooting();
+        spawnedBird = Instantiate(activeBird, idlePosition.position, Quaternion.identity);
         spawnedBird.transform.right = dir;
         birdOnSlingshot = true;
     }

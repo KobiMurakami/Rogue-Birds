@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPerks: 3
-  birdBag: {fileID: 0}
+  birdBag: {fileID: 188112682053736897, guid: 7449d2233491b8444ae3dc16fd4dd987, type: 3}
   perkname1: {fileID: 0}
   perkname2: {fileID: 0}
   perkname3: {fileID: 0}
