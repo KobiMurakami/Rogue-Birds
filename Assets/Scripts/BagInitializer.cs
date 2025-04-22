@@ -1,17 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BagInitializer : MonoBehaviour
 {
     //Non-permanent startup script to initialize the bord bag with entries
-    
-    [SerializeField] private Bird defaultBirdPrefab;
+    public List<Bird> birdPrefabs;
 
     private void Start()
     {
         //Generating bag
-        for (int i = 0; i < 3; i++)
+        foreach (Bird bird in birdPrefabs)
         {
-            BirdBagManager.Instance.AddBird(defaultBirdPrefab);
+            BirdBagManager.Instance.AddBird(bird);
         }
     }
 }
+    
+
+

@@ -28,7 +28,7 @@ public abstract class Bird : MonoBehaviour
 
     private void Update()
     {
-        //Powerup Activation, currently buggy for some reason
+        //Powerup Activation
         if (hasBeenLaunched &&  Input.GetKeyDown(KeyCode.Space) && !powerUsed)
         {
             Debug.Log("Powerup");

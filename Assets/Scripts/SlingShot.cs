@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 public class SlingShot : MonoBehaviour
 {
-    //This script should be the same as the one used for slingshot movement, attached to the slingshot gameobject
     [Header("Line Renderers")]
     [SerializeField] public LineRenderer leftLineRenderer;
     [SerializeField] public LineRenderer rightLineRenderer;
@@ -18,7 +17,6 @@ public class SlingShot : MonoBehaviour
 
     [Header("Slingshot settings")]
     [SerializeField] private float maxDistance = 3.5f;
-
     [SerializeField] private float shotForce = 5f;
     [SerializeField] private float respawnTime = 3f;
     private Vector2 direction;
@@ -28,35 +26,65 @@ public class SlingShot : MonoBehaviour
 
     [SerializeField] private SlingShotArea slingShotArea;
     [SerializeField] private float birdPosOffset = 2f;
-    
     private Bird spawnedBird;
+    
+    [Header("Rogue-like settings")]
     public Bird activeBird;
 
+    public int rerollsLeft;
+    public int shotsLeft;
+    
+    
+    public delegate void ShotFired();
+    public static event ShotFired OnShotFired;
     
 
     private void Start()
     {
+        //PROBLEM if slingshot is created before bag manager, use Ultimate Manager to make slingshot
         SpawnBird();
     }
 
     private void Update()
     {
-        if(Mouse.current.leftButton.wasPressedThisFrame && slingShotArea.IsWithinSlingshotArea())
+        if (shotsLeft > 0) //Uncertain this line should cut off everything, also shouldn't call game over the frame after its shot
         {
-            clickedWithinArea = true;
+            if (Mouse.current.leftButton.wasPressedThisFrame && slingShotArea.IsWithinSlingshotArea())
+            {
+                clickedWithinArea = true;
+            }
+
+            if (Mouse.current.leftButton.isPressed && clickedWithinArea && birdOnSlingshot)
+            {
+                Debug.Log("left mouse pressed");
+                DrawSlingshot();
+                PositionAndRotateBird();
+            }
+            
+            //Bird launch
+            if (Mouse.current.leftButton.wasReleasedThisFrame && birdOnSlingshot)
+            {
+                clickedWithinArea = false;
+                spawnedBird.LaunchBird(direction, shotForce);
+                birdOnSlingshot = false;
+                shotsLeft--;
+                OnShotFired?.Invoke();
+                if (shotsLeft > 0)
+                {
+                    StartCoroutine(spawnBirdAfterTime());
+                }
+            }
+
+            //Reroll activation, NEEDS TO BE CHANGED FROM 'R' TO RAY-CASTED CLICK
+            if (Input.GetKeyDown(KeyCode.R) && rerollsLeft > 0)
+            {
+                RerollBird();
+                rerollsLeft--;
+            }
         }
-        if(Mouse.current.leftButton.isPressed && clickedWithinArea && birdOnSlingshot)
+        else
         {
-            Debug.Log("left mouse pressed");
-            DrawSlingshot();
-            PositionAndRotateBird();
-        }
-        if(Mouse.current.leftButton.wasReleasedThisFrame && birdOnSlingshot)
-        {
-            clickedWithinArea = false;
-            spawnedBird.LaunchBird(direction, shotForce);
-            birdOnSlingshot = false;
-            StartCoroutine(spawnBirdAfterTime());
+            //GAME OVER
         }
     }
 
