@@ -166,6 +166,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdName: Bobby
-  mass: 1
-  speed: 1
   isInMotion: 0
+  _speedModifier: 0.8

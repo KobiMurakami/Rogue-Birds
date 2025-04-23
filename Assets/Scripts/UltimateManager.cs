@@ -3,15 +3,34 @@ using UnityEngine;
 
 public class UltimateManager : MonoBehaviour
 {
-    //This script is used to instantiate all the other managers, this will keep the order consistent.
+    //This script is used to instantiate all the other managers, this will keep the order consistent preventing Null references.
     
-    public List<GameObject> managers;
+    public static UltimateManager Instance { get; set; }
+    
+    [Header("Managers")]
+    public GameObject birdBagManager;
+    public GameObject bagInitializer;
+    public GameObject perkManager;
 
     private void Awake()
     {
-        foreach (GameObject manager in managers)
+        //Singleton
+        if (Instance != null && Instance != this)
         {
-            Instantiate(manager);
+            Destroy(gameObject);
         }
+        else
+        {
+            Instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
+        
+        //Instantiation Order
+        Instantiate(birdBagManager);
+        Instantiate(bagInitializer);
+        Instantiate(perkManager);
     }
+    
+    
+    //TODO potentially have this turn on the slingshots when entering each scene
 }

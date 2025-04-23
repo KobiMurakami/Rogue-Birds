@@ -2278,6 +2278,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952983843}
   m_CullTransparentMesh: 1
+--- !u!1001 &958745621
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.33394694
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.110363856
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 47172858591153556, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_Name
+      value: NewSlingShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
 --- !u!1001 &967326515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2673,17 +2734,21 @@ PrefabInstance:
       propertyPath: 'managers.Array.data[2]'
       value: 
       objectReference: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+    - target: {fileID: 695791377252563747, guid: da79e28c159fa454ca96ca924b1d13a4, type: 3}
+      propertyPath: 'managers.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2462501371818981737, guid: 88acb585d3a71034088c8d7e2b53eb14, type: 3}
     - target: {fileID: 1924443098497618602, guid: da79e28c159fa454ca96ca924b1d13a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1732242
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1924443098497618602, guid: da79e28c159fa454ca96ca924b1d13a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.397277
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1924443098497618602, guid: da79e28c159fa454ca96ca924b1d13a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.04245063
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1924443098497618602, guid: da79e28c159fa454ca96ca924b1d13a4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2871,7 +2936,7 @@ GameObject:
   - component: {fileID: 1317915761}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3752,3 +3817,4 @@ SceneRoots:
   - {fileID: 926282096}
   - {fileID: 1256686038}
   - {fileID: 1678998909}
+  - {fileID: 958745621}

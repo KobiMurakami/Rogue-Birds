@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8964182343215373230}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1732242, y: -0.397277, z: 0.04245063}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,8 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82436cd18d5038a4d8e68f8f7573ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  managers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  birdBagManager: {fileID: 2352628433156141294, guid: 7449d2233491b8444ae3dc16fd4dd987, type: 3}
+  bagInitializer: {fileID: 5217266096683956739, guid: 9b7ae605c1ef4c245b726f44b004c03a, type: 3}
+  perkManager: {fileID: 2462501371818981737, guid: 88acb585d3a71034088c8d7e2b53eb14, type: 3}

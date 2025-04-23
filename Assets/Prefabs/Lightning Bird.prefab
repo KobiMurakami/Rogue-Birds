@@ -166,8 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdName: Lightning
-  mass: 5
-  speed: 2
   isInMotion: 0
   lightning: {fileID: 6799989935912347481, guid: 726b868718940ff419156a5f6b6ae704, type: 3}
   lightingTimeDifference: 0.5
+  _speedModifier: 1
