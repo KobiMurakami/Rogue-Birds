@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5217266096683956739
+--- !u!1 &2462501371818981737
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1203867333895770718}
-  - component: {fileID: 5370444956348499274}
+  - component: {fileID: 7280925583260612267}
+  - component: {fileID: 3807841889880522245}
   m_Layer: 0
-  m_Name: BagInitializer
+  m_Name: PerkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1203867333895770718
+--- !u!4 &7280925583260612267
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5217266096683956739}
+  m_GameObject: {fileID: 2462501371818981737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1732242, y: -0.397277, z: 0.04245063}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5370444956348499274
+--- !u!114 &3807841889880522245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5217266096683956739}
+  m_GameObject: {fileID: 2462501371818981737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba718b509690100478779296838863f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 448399b37a3c6ca438ab6ad8fe1c005f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdPrefabs:
-  - {fileID: -339026737000156301, guid: 00b0d29968981a54682841a68034617a, type: 3}
-  - {fileID: -3387659799506037687, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
-  - {fileID: -339026737000156301, guid: 00b0d29968981a54682841a68034617a, type: 3}
+  maxPerks: 3
+  birdBag: {fileID: 188112682053736897, guid: 7449d2233491b8444ae3dc16fd4dd987, type: 3}
+  perkname1: {fileID: 0}
+  perkname2: {fileID: 0}
+  perkname3: {fileID: 0}
