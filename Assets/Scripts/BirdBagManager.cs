@@ -8,6 +8,7 @@ public class BirdBagManager : MonoBehaviour
 
     public List<Bird> birdBag = new List<Bird>();
     public List<Bird> temporarilyNotInBag = new List<Bird>();
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -19,11 +20,6 @@ public class BirdBagManager : MonoBehaviour
             Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
-    }
-
-    void Start()
-    {
-       
     }
 
     //Add a bird to the total bag
