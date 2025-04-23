@@ -472,7 +472,7 @@ MonoBehaviour:
   shotForce: 9
   respawnTime: 3
   slingShotArea: {fileID: 9138076998264688331}
-  birdPosOffset: 0.2
+  birdPosOffset: 2
   activeBird: {fileID: 0}
   rerollsLeft: 3
   shotsLeft: 3
