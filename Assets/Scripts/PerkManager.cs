@@ -13,7 +13,7 @@ public class PerkManager : MonoBehaviour
     
     //Vars
     public List<GameObject> allPerks = new List<GameObject>();
-    private List<GameObject> activePerks = new List<GameObject>();
+    public List<GameObject> activePerks = new List<GameObject>();
     
     public int maxPerks;
     

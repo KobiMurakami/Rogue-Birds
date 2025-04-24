@@ -9,6 +9,10 @@ public class BirdBagManager : MonoBehaviour
     public List<Bird> birdBag = new List<Bird>();
     public List<Bird> temporarilyNotInBag = new List<Bird>();
     
+    //Events
+    public delegate void BirdAdded(Bird newBird);
+    public static event BirdAdded OnBirdAdded;
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -26,6 +30,7 @@ public class BirdBagManager : MonoBehaviour
     public void AddBird(Bird bird)
     {
         birdBag.Add(bird);
+        OnBirdAdded?.Invoke(bird);
     }
     
     //Remove a bird from the total bag
@@ -124,7 +129,7 @@ public class BirdBagManager : MonoBehaviour
         return new List<string>(uniqueNames);
     }
 
-    public void replaceBird(Bird bird)
+    public void ReplaceBird(Bird bird)
     {
         //Sanity check
         if (bird != null && temporarilyNotInBag.Contains(bird))
