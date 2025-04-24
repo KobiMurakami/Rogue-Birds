@@ -7,6 +7,17 @@ class LightningBird : Bird
     public float lightingTimeDifference;
     
     float verticalOffset = 2f;
+    
+    
+    //Weird ass Necessary Inheritance stuff
+    [SerializeField] private float _speedModifier = 1.0f;
+    public override float speedModifier
+    {
+        get { return _speedModifier; }
+        set { _speedModifier = value; }
+    }
+
+
     public override void ActivateAbility()
     {
         

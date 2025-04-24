@@ -73,6 +73,11 @@ public class LevelController : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    void GoToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void WinScreen()
     {
         winText.SetActive(true);
@@ -89,11 +94,11 @@ public class LevelController : MonoBehaviour
             ReloadLevel();
         }
 
-        //Menu WIP
-        /*if (menuButtonWin)
+        //Menu
+        if (menuButtonWin)
         {
-            SceneManager.LoadScene(menu);
-        }*/
+            GoToMenu();
+        }
     }
     
     void LoseScreen()

@@ -5,8 +5,8 @@ public class BlockHealth : MonoBehaviour
 {
     [SerializeField] private float _damageThreshold = 0.2f;
     private float _currentHealth;
-    public GameObject WoodPrefab;
-    public GameObject StonePrefab;
+    public GameObject woodPrefab;
+    public GameObject stonePrefab;
     private float woodHealth = 1f;
     private float stoneHealth = 3f;
 
@@ -15,12 +15,12 @@ public class BlockHealth : MonoBehaviour
 
     private void Awake()
     {
-        if (WoodPrefab)
+        if (woodPrefab)
         {
             _currentHealth = 1f;
         }
         
-        if (StonePrefab)
+        if (stonePrefab)
         {
             _currentHealth = 3f;
         }
@@ -51,5 +51,6 @@ public class BlockHealth : MonoBehaviour
         {
             DamageEnemy(impactVelocity);
         }
+        
     }
 }

@@ -3,8 +3,7 @@ using UnityEngine;
 public abstract class Bird : MonoBehaviour
 {
     public string birdName;
-    public float mass;
-    public float speed;
+    public abstract float speedModifier { get; set; }
     public float isInMotion;
 
     private Rigidbody2D rb;
@@ -50,7 +49,10 @@ public abstract class Bird : MonoBehaviour
     {
         rb.isKinematic = false;
         circleCollider.enabled = true;
-        rb.AddForce(direction * force, ForceMode2D.Impulse);
+
+        float adjustedForce = force * speedModifier;
+
+        rb.AddForce(direction * adjustedForce, ForceMode2D.Impulse);
         hasBeenLaunched = true;
         shouldFaceVelocityDirection = true;
     }
