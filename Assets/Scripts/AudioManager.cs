@@ -68,7 +68,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             //Default volume for now
-            musicSource.volume = 0.7f;
+            musicSource.volume = 1.0f;
         }
     }
 }
