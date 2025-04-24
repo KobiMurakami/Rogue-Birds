@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
+using UnityEngine.InputSystem.Android.LowLevel;
+using UnityEngine.InputSystem.LowLevel;
 public class SlingShot : MonoBehaviour
 {
     [Header("Line Renderers")]
@@ -41,6 +43,8 @@ public class SlingShot : MonoBehaviour
     
     public delegate void ShotFired();
     public static event ShotFired OnShotFired;
+
+    public GameObject levelManager;
     
 
     private void Start()
@@ -49,6 +53,7 @@ public class SlingShot : MonoBehaviour
         SpawnBird();
         rerollsLeft = maxRerolls;
         shotsLeft = maxShots;
+        levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
     }
 
     private void Update()
@@ -90,6 +95,9 @@ public class SlingShot : MonoBehaviour
         }
         else
         {
+            StartCoroutine(waitForGameOver());
+            LevelController joo = levelManager.GetComponent<LevelController>();
+            joo.loseCondition = true;
             //GAME OVER
             //Should give time for objects falling, otherwise gameover will call right after last shot
         }
@@ -143,5 +151,9 @@ public class SlingShot : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnTime);
         SpawnBird();
+    }
+
+    private IEnumerator waitForGameOver(){
+        yield return new WaitForSeconds(5);
     }
 }
