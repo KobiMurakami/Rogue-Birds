@@ -39,6 +39,7 @@ public class SlingShot : MonoBehaviour
     public int shotsLeft;
     
     
+    //Events
     public delegate void ShotFired();
     public static event ShotFired OnShotFired;
     
@@ -98,8 +99,9 @@ public class SlingShot : MonoBehaviour
     //Rerolls the bird, should be called when reroll button is clicked
     private void RerollBird()
     {
-        BirdBagManager.Instance.replaceBird(activeBird);
-        activeBird = BirdBagManager.Instance.GetBirdForShooting();
+        BirdBagManager.Instance.ReplaceBird(activeBird);
+        Destroy(spawnedBird.gameObject);
+        SpawnBird();
         //Animatations
     }
     
