@@ -12,21 +12,10 @@ public class PerkManager : MonoBehaviour
     public static event PerkDeactivated OnPerkDeactivated;
     
     //Vars
-    private List<GameObject> allPerks = new List<GameObject>();
-    private List<GameObject> activePerks = new List<GameObject>();
+    public List<GameObject> allPerks = new List<GameObject>();
+    public List<GameObject> activePerks = new List<GameObject>();
     
     public int maxPerks;
-    public BirdBagManager birdBag;
-    
-    [Header("Perks")]
-    //Change variable names in future
-    public GameObject perkname1;
-    public GameObject perkname2;
-    public GameObject perkname3;
-    
-    
-    
-    
     
     
     void Awake()
@@ -40,11 +29,6 @@ public class PerkManager : MonoBehaviour
             Instance = this;
         }
         DontDestroyOnLoad(gameObject);
-        
-        //Adding all perks to the set, probably a better way to do this, -----EACH NEW PERK MUST BE ADDED IN AWAKE-----
-        allPerks.Add(perkname1);
-        allPerks.Add(perkname2);
-        allPerks.Add(perkname3);
     }
 
     //Instantiates the perk game object and adds it to the active list

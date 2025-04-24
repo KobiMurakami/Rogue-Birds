@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448399b37a3c6ca438ab6ad8fe1c005f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allPerks:
+  - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
+  activePerks: []
   maxPerks: 3
-  birdBag: {fileID: 188112682053736897, guid: 7449d2233491b8444ae3dc16fd4dd987, type: 3}
-  perkname1: {fileID: 0}
-  perkname2: {fileID: 0}
-  perkname3: {fileID: 0}

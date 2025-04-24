@@ -31,10 +31,15 @@ public class SlingShot : MonoBehaviour
     [Header("Rogue-like settings")]
     public Bird activeBird;
 
+    
+    [SerializeField] private int maxRerolls;
+    [SerializeField] private int maxShots;
+
     public int rerollsLeft;
     public int shotsLeft;
     
     
+    //Events
     public delegate void ShotFired();
     public static event ShotFired OnShotFired;
     
@@ -43,6 +48,8 @@ public class SlingShot : MonoBehaviour
     {
         //PROBLEM if slingshot is created before bag manager, use Ultimate Manager to make slingshot
         SpawnBird();
+        rerollsLeft = maxRerolls;
+        shotsLeft = maxShots;
     }
 
     private void Update()
@@ -85,16 +92,19 @@ public class SlingShot : MonoBehaviour
         else
         {
             //GAME OVER
+            //Should give time for objects falling, otherwise gameover will call right after last shot
         }
     }
 
     //Rerolls the bird, should be called when reroll button is clicked
     private void RerollBird()
     {
-        BirdBagManager.Instance.replaceBird(activeBird);
-        activeBird = BirdBagManager.Instance.GetBirdForShooting();
+        BirdBagManager.Instance.ReplaceBird(activeBird);
+        Destroy(spawnedBird.gameObject);
+        SpawnBird();
         //Animatations
     }
+    
     private void DrawSlingshot()
     {
         Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
