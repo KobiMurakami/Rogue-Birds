@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1870722684058085136}
   - component: {fileID: 8616061041367760889}
   - component: {fileID: 3292905153690581451}
+  - component: {fileID: 3711285925765461886}
   m_Layer: 0
   m_Name: SkinnyWoodPlank
   m_TagString: LevelMats
@@ -161,3 +162,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3711285925765461886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489617042099371348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8466bdd807ec64b8cece9dc2a8c0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  damageThreshold: 0.5
+  blockType: 1
+  breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
