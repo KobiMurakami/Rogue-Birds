@@ -84,36 +84,20 @@ public class LevelController : MonoBehaviour
 
         //Logic for going to the next stage, returning to the main menu, or replaying the current level
         //TODO: Fix problem where it just instantly reloads regardless of input
-        if (nextLevelButton)
-        {
-            GoNextLevel();
-        }
+        nextLevelButton.onClick.AddListener(GoNextLevel);
 
-        if (replayButtonWin)
-        {
-            ReloadLevel();
-        }
-
+        replayButtonWin.onClick.AddListener(ReloadLevel);
+        
         //Menu
-        if (menuButtonWin)
-        {
-            GoToMenu();
-        }
+        menuButtonWin.onClick.AddListener(GoToMenu);
     }
     
     void LoseScreen()
     {
         loseText.SetActive(true);
 
-        if (replayButtonLose)
-        {
-            ReloadLevel();
-        }
-
-        //Menu WIP
-        /*if (menuButtonLose)
-        {
-            //SceneManager.LoadScene(menu);
-        }*/
+        replayButtonLose.onClick.AddListener(ReloadLevel);
+        
+        menuButtonLose.onClick.AddListener(GoToMenu);
     }
 }
