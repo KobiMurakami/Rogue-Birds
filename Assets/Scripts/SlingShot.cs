@@ -45,7 +45,7 @@ public class SlingShot : MonoBehaviour
     public delegate void ShotFired();
     public static event ShotFired OnShotFired;
 
-    public GameObject levelManager;
+   
     
 
     private void Start()
@@ -54,7 +54,6 @@ public class SlingShot : MonoBehaviour
         SpawnBird();
         rerollsLeft = maxRerolls;
         shotsLeft = maxShots;
-        levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
     }
 
     private void Update()
@@ -97,9 +96,9 @@ public class SlingShot : MonoBehaviour
         else
         {
             StartCoroutine(waitForGameOver());
-            LevelController joo = levelManager.GetComponent<LevelController>();
-            joo.loseCondition = true;
-            //GAME OVER
+            
+            //This line is ass but necessary to prevent Null Reference on start up
+            GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<LevelController>().loseCondition = true;
             //Should give time for objects falling, otherwise gameover will call right after last shot
         }
     }
