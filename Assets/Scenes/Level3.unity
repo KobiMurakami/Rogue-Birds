@@ -191,6 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45991502}
   - component: {fileID: 45991501}
+  - component: {fileID: 45991503}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -210,8 +211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1cfbf109d9f240abc504b1613f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Level4
+  nextLevelName: WinScene
   levelName: Level3
+  scoreManager: {fileID: 45991503}
+  loseCondition: 0
   winText: {fileID: 640747105}
   loseText: {fileID: 567269190}
   nextLevelButton: {fileID: 1106508842}
@@ -234,6 +237,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45991503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45991500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586ff367333c88646a37bcac22bc82ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numEnemiesInLevel: 3
+  numEnemiesKilled: 0
+  score: 0
 --- !u!1001 &98760525
 PrefabInstance:
   m_ObjectHideFlags: 0
