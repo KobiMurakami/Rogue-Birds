@@ -85,13 +85,6 @@ public class SlingShot : MonoBehaviour
                     StartCoroutine(spawnBirdAfterTime());
                 }
             }
-
-            //Reroll activation, NEEDS TO BE CHANGED FROM 'R' TO RAY-CASTED CLICK
-            if (Input.GetKeyDown(KeyCode.R) && rerollsLeft > 0)
-            {
-                RerollBird();
-                rerollsLeft--;
-            }
         }
         else
         {
@@ -104,7 +97,7 @@ public class SlingShot : MonoBehaviour
     }
 
     //Rerolls the bird, should be called when reroll button is clicked
-    private void RerollBird()
+    public void RerollBird()
     {
         BirdBagManager.Instance.ReplaceBird(activeBird);
         Destroy(spawnedBird.gameObject);
