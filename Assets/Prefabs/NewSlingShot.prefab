@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &47172858591153556
 Transform:
   m_ObjectHideFlags: 0
@@ -475,10 +475,10 @@ MonoBehaviour:
   slingShotArea: {fileID: 9138076998264688331}
   birdPosOffset: 0.2
   activeBird: {fileID: 0}
-  maxRerolls: 3
-  maxShots: 3
-  rerollsLeft: 3
-  shotsLeft: 3
+  maxRerolls: 15
+  maxShots: 5
+  rerollsLeft: 15
+  shotsLeft: 5
 --- !u!1 &3642976755713863398
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 2025054267945525357}
   - component: {fileID: 6867806428922170436}
   - component: {fileID: 8329129061009363095}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RerollButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7936198955817090223}
   - component: {fileID: 5886069319576768173}
   - component: {fileID: 3652561058888542931}
-  - component: {fileID: -339026737000156301}
   - component: {fileID: 2437420349220769953}
+  - component: {fileID: 3190684376382082632}
   m_Layer: 0
-  m_Name: Lightning Bird
+  m_Name: Bouncy Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f7c5ccc73e263f458ab7dcfe0b40964, type: 2}
+  - {fileID: 2100000, guid: 27d4906a55a6026458d6a754c4d755e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,11 +103,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 33d1c01c228e6104cb59fab875640346, type: 2}
+  m_Mass: 0.5
+  m_LinearDamping: 0.1
+  m_AngularDamping: 0.1
+  m_GravityScale: 0.6
+  m_Material: {fileID: 6200000, guid: 6f774189586d7fd479decfc0ef55c05b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -116,7 +116,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &3652561058888542931
 CircleCollider2D:
@@ -154,27 +154,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &-339026737000156301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9150330567973498683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264ff80399a77a84788e63c9a2d9bf49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  birdName: Lightning
-  isInMotion: 0
-  lightningBirdChannel: {fileID: 2437420349220769953}
-  lightningBirdSound: {fileID: 8300000, guid: bffcf5bd6cc7d784eb20a83d4c934840, type: 3}
-  lightningBirdVolume: 0.5
-  lightningBirdPitch: 2
-  lightning: {fileID: 6799989935912347481, guid: 726b868718940ff419156a5f6b6ae704, type: 3}
-  lightingTimeDifference: 0.2
-  _speedModifier: 1
 --- !u!82 &2437420349220769953
 AudioSource:
   m_ObjectHideFlags: 0
@@ -272,3 +251,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3190684376382082632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150330567973498683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c0a414288367f4a96edcde767fb1f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdName: Bouncy
+  isInMotion: 0
+  _speedModifier: 1.1
