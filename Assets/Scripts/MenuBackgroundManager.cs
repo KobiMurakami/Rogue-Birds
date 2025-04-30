@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuBackgroundManager : MonoBehaviour
 {
@@ -61,7 +60,7 @@ public class MenuBackgroundManager : MonoBehaviour
     void Update()
     {
         // Check if it's time to spawn a new object
-        if (Time.time >= nextSpawnTime && SceneManager.GetActiveScene().name == "MainMenu") //Austins fix to ensure this only happens on Main Menu
+        if (Time.time >= nextSpawnTime)
         {
             SpawnRandomObject();
             nextSpawnTime = Time.time + Random.Range(minSpawnDelay, maxSpawnDelay);

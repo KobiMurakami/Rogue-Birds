@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7447456187412151788}
   - component: {fileID: -1492801181821091553}
   - component: {fileID: 8616326702718851958}
-  - component: {fileID: 8418332394370722774}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Untagged
@@ -154,20 +153,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &8418332394370722774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6799989935912347481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf86ef78a6308944bf56b73f625649a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionRadius: 1
-  explosionForce: 1500
-  affectedLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
