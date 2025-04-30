@@ -73,6 +73,7 @@ public class LevelController : MonoBehaviour
 
     void GoNextLevel()
     {
+        BirdBagManager.Instance.ResetBag();
         SceneManager.LoadScene(nextLevelName);
     }
 

@@ -3,6 +3,13 @@ using UnityEngine;
 
 class LightningBird : Bird
 {
+    [Header("Sound")]
+    public AudioSource lightningBirdChannel;
+    public AudioClip lightningBirdSound;
+    public float lightningBirdVolume;
+    public float lightningBirdPitch;
+    
+    [Header("Lightning")]
     public GameObject lightning;
     public float lightingTimeDifference;
     
@@ -20,8 +27,11 @@ class LightningBird : Bird
 
     public override void ActivateAbility()
     {
-        
-        Vector2 lightningSpawn = new Vector2(transform.position.x, transform.position.y + verticalOffset);
+        //Sounds
+        lightningBirdChannel.clip = lightningBirdSound;
+        lightningBirdChannel.volume = lightningBirdVolume;
+        lightningBirdChannel.pitch = lightningBirdPitch;
+        lightningBirdChannel.Play();
         
         StartCoroutine(SpawnLightning(0));
         StartCoroutine(SpawnLightning(lightingTimeDifference));
