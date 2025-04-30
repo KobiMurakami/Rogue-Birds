@@ -22,9 +22,6 @@ public class LevelController : MonoBehaviour
     public Button replayButtonLose;
     public Button menuButtonWin;
     public Button menuButtonLose;
-
-    //public GameObject Enemy();
-    //public GameObject Boss();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,15 +38,11 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*var enemies = GameObject.FindWithTag("Enemy"); //find gameobjects with the tag "Enemy"
-
-        if (enemies == null)
+        /*if (EnemiesAreDead())
         {
-            {
-                WinScreen();
-            }
+            GoNextLevel();
         }*/
-
+        
         //Debug code for testing win and loss screens
         if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
         {
@@ -70,6 +63,18 @@ public class LevelController : MonoBehaviour
         
         
     }
+
+    /*bool EnemiesAreDead()
+    {
+        foreach (var enemy in enemies)
+        {
+            if (enemy.gameObject.activeSelf)
+            {
+                return false;
+            }
+        }
+        return true;
+    }*/
 
     void GoNextLevel()
     {

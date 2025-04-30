@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2437420349220769953}
   m_Layer: 0
   m_Name: Lightning Bird
-  m_TagString: Bird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

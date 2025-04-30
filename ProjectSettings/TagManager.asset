@@ -6,8 +6,6 @@ TagManager:
   tags:
   - LevelMats
   - Rock
-  - Bird
-  - Enemy
   layers:
   - Default
   - TransparentFX
