@@ -24,6 +24,7 @@ public class BombBird : Bird
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
+        Destroy(gameObject);
     }
 
     private void ApplyExplosionForce()
