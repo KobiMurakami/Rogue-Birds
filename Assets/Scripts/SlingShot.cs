@@ -39,6 +39,8 @@ public class SlingShot : MonoBehaviour
 
     public int rerollsLeft;
     public int shotsLeft;
+
+    public GameObject levelManager;
     
     
     //Events
@@ -88,7 +90,7 @@ public class SlingShot : MonoBehaviour
         }
         else
         {
-            levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
+            // levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
             StartCoroutine(waitForGameOver());
             
             //This line is ass but necessary to prevent Null Reference on start up
