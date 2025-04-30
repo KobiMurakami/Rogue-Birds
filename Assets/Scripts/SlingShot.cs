@@ -96,6 +96,7 @@ public class SlingShot : MonoBehaviour
         }
         else
         {
+            levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
             StartCoroutine(waitForGameOver());
             LevelController joo = levelManager.GetComponent<LevelController>();
             joo.loseCondition = true;

@@ -601,7 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelName: Level2
   levelName: Level1
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 273826768}
   loseCondition: 0
   winText: {fileID: 140888220}
   loseText: {fileID: 1220385657}
@@ -2795,7 +2795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3626,6 +3626,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DemoSlingshot
       objectReference: {fileID: 0}
+    - target: {fileID: 6982345520663944126, guid: 62a24f2fc50bdf046a8a7b1e309d400f, type: 3}
+      propertyPath: activeBird
+      value: 
+      objectReference: {fileID: 8074150365811040883, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
+    - target: {fileID: 6982345520663944126, guid: 62a24f2fc50bdf046a8a7b1e309d400f, type: 3}
+      propertyPath: VanillaBird
+      value: 
+      objectReference: {fileID: 8074150365811040883, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
+    - target: {fileID: 6982345520663944126, guid: 62a24f2fc50bdf046a8a7b1e309d400f, type: 3}
+      propertyPath: LightningBird
+      value: 
+      objectReference: {fileID: 8074150365811040883, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3826,10 +3838,8 @@ SceneRoots:
   - {fileID: 786335901}
   - {fileID: 7932830154486480209}
   - {fileID: 1695212338}
-  - {fileID: 852727496}
-  - {fileID: 2004761407}
-  - {fileID: 659479540}
-  - {fileID: 1179321633}
-  - {fileID: 95273631}
-  - {fileID: 428486211}
   - {fileID: 434246335}
+  - {fileID: 942450862}
+  - {fileID: 3780639713830220769}
+  - {fileID: 152757875}
+  - {fileID: 1074314825}

@@ -55,7 +55,7 @@ public class LevelController : MonoBehaviour
         if(loseCondition)
         {
             loseText.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.L))
+            if(Input.GetKeyDown(KeyCode.R))
             {
                 ReloadLevel();
             }
@@ -124,9 +124,9 @@ public class LevelController : MonoBehaviour
         }
 
         //Menu WIP
-        /*if (menuButtonLose)
+        if (menuButtonLose)
         {
-            //SceneManager.LoadScene(menu);
-        }*/
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
