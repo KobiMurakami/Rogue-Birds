@@ -41,14 +41,14 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*var enemies = GameObject.FindWithTag("Enemy"); //find gameobjects with the tag "Enemy"
+        var enemies = GameObject.FindWithTag("Enemy"); //find gameobjects with the tag "Enemy"
 
         if (enemies == null)
         {
             {
                 WinScreen();
             }
-        }*/
+        }
 
         //Debug code for testing win and loss screens
         if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
