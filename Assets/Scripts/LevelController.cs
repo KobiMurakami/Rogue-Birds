@@ -8,6 +8,9 @@ public class LevelController : MonoBehaviour
 {
     public string nextLevelName;
     public string levelName;
+
+    public Scoring scoreManager;
+    public bool loseCondition;
     
     //Win and Lose screens for the game 
     public GameObject winText;
@@ -19,12 +22,16 @@ public class LevelController : MonoBehaviour
     public Button replayButtonLose;
     public Button menuButtonWin;
     public Button menuButtonLose;
+
+    //public GameObject Enemy();
+    //public GameObject Boss();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         winText.SetActive(false);
         loseText.SetActive(false);
+        scoreManager = GetComponent<Scoring>();
     }
     private void OnEnable()
     {
@@ -34,37 +41,39 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (EnemiesAreDead())
-        {
-            GoNextLevel();
-        }*/
-        
-        //Debug code for testing win and loss screens
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            WinScreen();
-        }
-        
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoseScreen();
-        }
-    }
+        /*var enemies = GameObject.FindWithTag("Enemy"); //find gameobjects with the tag "Enemy"
 
-    /*bool EnemiesAreDead()
-    {
-        foreach (var enemy in enemies)
+        if (enemies == null)
         {
-            if (enemy.gameObject.activeSelf)
             {
-                return false;
+                WinScreen();
+            }
+        }*/
+
+        //Debug code for testing win and loss screens
+        if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
+        {
+            winText.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.W))
+            {
+                GoNextLevel();
             }
         }
-        return true;
-    }*/
+        if(loseCondition)
+        {
+            loseText.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                ReloadLevel();
+            }
+        }
+        
+        
+    }
 
     void GoNextLevel()
     {
+        BirdBagManager.Instance.ResetBag();
         SceneManager.LoadScene(nextLevelName);
     }
 
@@ -84,36 +93,27 @@ public class LevelController : MonoBehaviour
 
         //Logic for going to the next stage, returning to the main menu, or replaying the current level
         //TODO: Fix problem where it just instantly reloads regardless of input
-        if (nextLevelButton)
-        {
-            GoNextLevel();
-        }
+        nextLevelButton.onClick.AddListener(GoNextLevel);
 
-        if (replayButtonWin)
-        {
-            ReloadLevel();
-        }
-
+        replayButtonWin.onClick.AddListener(ReloadLevel);
+        
         //Menu
-        if (menuButtonWin)
-        {
-            GoToMenu();
-        }
+        menuButtonWin.onClick.AddListener(GoToMenu);
     }
     
     void LoseScreen()
     {
         loseText.SetActive(true);
-
         if (replayButtonLose)
         {
             ReloadLevel();
         }
 
         //Menu WIP
-        /*if (menuButtonLose)
+        if (menuButtonLose)
         {
-            //SceneManager.LoadScene(menu);
-        }*/
+            SceneManager.LoadScene("MainMenu");
+        }
+
     }
 }

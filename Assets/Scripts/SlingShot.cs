@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
+using UnityEngine.InputSystem.Android.LowLevel;
+using UnityEngine.InputSystem.LowLevel;
 public class SlingShot : MonoBehaviour
 {
     [Header("Line Renderers")]
@@ -37,11 +39,15 @@ public class SlingShot : MonoBehaviour
 
     public int rerollsLeft;
     public int shotsLeft;
+
+    public GameObject levelManager;
     
     
     //Events
     public delegate void ShotFired();
     public static event ShotFired OnShotFired;
+
+   
     
 
     private void Start()
@@ -81,23 +87,20 @@ public class SlingShot : MonoBehaviour
                     StartCoroutine(spawnBirdAfterTime());
                 }
             }
-
-            //Reroll activation, NEEDS TO BE CHANGED FROM 'R' TO RAY-CASTED CLICK
-            if (Input.GetKeyDown(KeyCode.R) && rerollsLeft > 0)
-            {
-                RerollBird();
-                rerollsLeft--;
-            }
         }
         else
         {
-            //GAME OVER
+            // levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
+            StartCoroutine(waitForGameOver());
+            
+            //This line is ass but necessary to prevent Null Reference on start up
+            GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<LevelController>().loseCondition = true;
             //Should give time for objects falling, otherwise gameover will call right after last shot
         }
     }
 
     //Rerolls the bird, should be called when reroll button is clicked
-    private void RerollBird()
+    public void RerollBird()
     {
         BirdBagManager.Instance.ReplaceBird(activeBird);
         Destroy(spawnedBird.gameObject);
@@ -145,5 +148,9 @@ public class SlingShot : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnTime);
         SpawnBird();
+    }
+
+    private IEnumerator waitForGameOver(){
+        yield return new WaitForSeconds(5);
     }
 }

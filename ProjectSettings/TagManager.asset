@@ -6,6 +6,8 @@ TagManager:
   tags:
   - LevelMats
   - Rock
+  - Bird
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - SlingShotArea
-  - 
+  - Reroll Button
   - 
   - 
   - 

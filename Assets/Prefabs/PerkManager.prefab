@@ -46,5 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allPerks:
   - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
+  - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
   activePerks: []
-  maxPerks: 3
+  maxPerks: 30
