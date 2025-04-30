@@ -45,9 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdPrefabs:
+
   - {fileID: -339026737000156301, guid: 00b0d29968981a54682841a68034617a, type: 3}
   - {fileID: -339026737000156301, guid: 00b0d29968981a54682841a68034617a, type: 3}
   - {fileID: -339026737000156301, guid: 00b0d29968981a54682841a68034617a, type: 3}
   - {fileID: 3190684376382082632, guid: 2d3eaefa53bef9941ba49619083f5821, type: 3}
   - {fileID: 3190684376382082632, guid: 2d3eaefa53bef9941ba49619083f5821, type: 3}
   - {fileID: 3190684376382082632, guid: 2d3eaefa53bef9941ba49619083f5821, type: 3}
+

@@ -46,6 +46,8 @@ public class DemoSlingShotScript : MonoBehaviour
     //Events
     public delegate void ShotFired();
     public static event ShotFired OnShotFired;
+    public GameObject levelManager;
+    public int Level;
     
 
     private void Start()
@@ -56,6 +58,8 @@ public class DemoSlingShotScript : MonoBehaviour
         SpawnBird();
         rerollsLeft = maxRerolls;
         shotsLeft = maxShots;
+        levelManager = GameObject.FindGameObjectWithTag("GameController");
+        Level = 0;
     }
 
     private void Update()
@@ -97,6 +101,9 @@ public class DemoSlingShotScript : MonoBehaviour
         }
         else
         {
+            levelManager = GameObject.FindGameObjectsWithTag("GameController")[Level];
+            LevelController joe = levelManager.GetComponent<LevelController>();
+            joe.loseCondition = true;
             //GAME OVER
             //Should give time for objects falling, otherwise gameover will call right after last shot
         }

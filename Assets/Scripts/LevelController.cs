@@ -22,6 +22,9 @@ public class LevelController : MonoBehaviour
     public Button replayButtonLose;
     public Button menuButtonWin;
     public Button menuButtonLose;
+
+    //public GameObject Enemy();
+    //public GameObject Boss();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,11 +41,15 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (EnemiesAreDead())
+        /*var enemies = GameObject.FindWithTag("Enemy"); //find gameobjects with the tag "Enemy"
+
+        if (enemies == null)
         {
-            GoNextLevel();
+            {
+                WinScreen();
+            }
         }*/
-        
+
         //Debug code for testing win and loss screens
         if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
         {
@@ -55,7 +62,7 @@ public class LevelController : MonoBehaviour
         if(loseCondition)
         {
             loseText.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.L))
+            if(Input.GetKeyDown(KeyCode.R))
             {
                 ReloadLevel();
             }
@@ -63,18 +70,6 @@ public class LevelController : MonoBehaviour
         
         
     }
-
-    /*bool EnemiesAreDead()
-    {
-        foreach (var enemy in enemies)
-        {
-            if (enemy.gameObject.activeSelf)
-            {
-                return false;
-            }
-        }
-        return true;
-    }*/
 
     void GoNextLevel()
     {
@@ -98,36 +93,27 @@ public class LevelController : MonoBehaviour
 
         //Logic for going to the next stage, returning to the main menu, or replaying the current level
         //TODO: Fix problem where it just instantly reloads regardless of input
-        if (nextLevelButton)
-        {
-            GoNextLevel();
-        }
+        nextLevelButton.onClick.AddListener(GoNextLevel);
 
-        if (replayButtonWin)
-        {
-            ReloadLevel();
-        }
-
+        replayButtonWin.onClick.AddListener(ReloadLevel);
+        
         //Menu
-        if (menuButtonWin)
-        {
-            GoToMenu();
-        }
+        menuButtonWin.onClick.AddListener(GoToMenu);
     }
     
     void LoseScreen()
     {
         loseText.SetActive(true);
-
         if (replayButtonLose)
         {
             ReloadLevel();
         }
 
         //Menu WIP
-        /*if (menuButtonLose)
+        if (menuButtonLose)
         {
-            //SceneManager.LoadScene(menu);
-        }*/
+            SceneManager.LoadScene("MainMenu");
+        }
+
     }
 }
