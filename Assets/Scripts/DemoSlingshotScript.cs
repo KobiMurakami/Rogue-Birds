@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
-using UnityEngine.InputSystem.Android.LowLevel;
-using UnityEngine.InputSystem.LowLevel;
-public class SlingShot : MonoBehaviour
+using System.Collections.Generic;
+using Random = UnityEngine.Random;
+public class DemoSlingShotScript : MonoBehaviour
 {
     [Header("Line Renderers")]
     [SerializeField] public LineRenderer leftLineRenderer;
@@ -32,6 +32,8 @@ public class SlingShot : MonoBehaviour
     
     [Header("Rogue-like settings")]
     public Bird activeBird;
+    public Bird LightningBird, VanillaBird;
+    public List<Bird> birds;
 
     
     [SerializeField] private int maxRerolls;
@@ -44,16 +46,20 @@ public class SlingShot : MonoBehaviour
     //Events
     public delegate void ShotFired();
     public static event ShotFired OnShotFired;
-
-   
+    public GameObject levelManager;
+    public int Level;
     
 
     private void Start()
     {
+        birds.Add(LightningBird);
+        birds.Add(VanillaBird);
         //PROBLEM if slingshot is created before bag manager, use Ultimate Manager to make slingshot
         SpawnBird();
         rerollsLeft = maxRerolls;
         shotsLeft = maxShots;
+        levelManager = GameObject.FindGameObjectWithTag("GameController");
+        Level = 0;
     }
 
     private void Update()
@@ -85,26 +91,32 @@ public class SlingShot : MonoBehaviour
                     StartCoroutine(spawnBirdAfterTime());
                 }
             }
+
+            // //Reroll activation, NEEDS TO BE CHANGED FROM 'R' TO RAY-CASTED CLICK
+            // if (Input.GetKeyDown(KeyCode.R) && rerollsLeft > 0)
+            // {
+            //     RerollBird();
+            //     rerollsLeft--;
+            // }
         }
         else
         {
-            levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
-            StartCoroutine(waitForGameOver());
-            
-            //This line is ass but necessary to prevent Null Reference on start up
-            GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<LevelController>().loseCondition = true;
+            levelManager = GameObject.FindGameObjectsWithTag("GameController")[Level];
+            LevelController joe = levelManager.GetComponent<LevelController>();
+            joe.loseCondition = true;
+            //GAME OVER
             //Should give time for objects falling, otherwise gameover will call right after last shot
         }
     }
 
-    //Rerolls the bird, should be called when reroll button is clicked
-    public void RerollBird()
-    {
-        BirdBagManager.Instance.ReplaceBird(activeBird);
-        Destroy(spawnedBird.gameObject);
-        SpawnBird();
-        //Animatations
-    }
+    // //Rerolls the bird, should be called when reroll button is clicked
+    // private void RerollBird()
+    // {
+    //     BirdBagManager.Instance.ReplaceBird(activeBird);
+    //     Destroy(spawnedBird.gameObject);
+    //     SpawnBird();
+    //     //Animatations
+    // }
     
     private void DrawSlingshot()
     {
@@ -130,7 +142,10 @@ public class SlingShot : MonoBehaviour
         Vector2 dir = (centerPosition.position - idlePosition.position).normalized;
         Vector2 spawnPosition = (Vector2)idlePosition.position + dir * birdPosOffset;
         
-        activeBird = BirdBagManager.Instance.GetBirdForShooting();
+
+        // activeBird = BirdBagManager.Instance.GetBirdForShooting();
+        int birdIndex = Random.Range(0, 2);
+        activeBird = birds[birdIndex];
         spawnedBird = Instantiate(activeBird, idlePosition.position, Quaternion.identity);
         spawnedBird.transform.right = dir;
         birdOnSlingshot = true;
@@ -146,9 +161,5 @@ public class SlingShot : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnTime);
         SpawnBird();
-    }
-
-    private IEnumerator waitForGameOver(){
-        yield return new WaitForSeconds(5);
     }
 }

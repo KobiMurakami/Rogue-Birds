@@ -8,6 +8,9 @@ public class LevelController : MonoBehaviour
 {
     public string nextLevelName;
     public string levelName;
+
+    public Scoring scoreManager;
+    public bool loseCondition;
     
     //Win and Lose screens for the game 
     public GameObject winText;
@@ -28,6 +31,7 @@ public class LevelController : MonoBehaviour
     {
         winText.SetActive(false);
         loseText.SetActive(false);
+        scoreManager = GetComponent<Scoring>();
     }
     private void OnEnable()
     {
@@ -47,19 +51,29 @@ public class LevelController : MonoBehaviour
         }*/
 
         //Debug code for testing win and loss screens
-        if (Input.GetKeyDown(KeyCode.W))
+        if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
         {
-            WinScreen();
+            winText.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.W))
+            {
+                GoNextLevel();
+            }
+        }
+        if(loseCondition)
+        {
+            loseText.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                ReloadLevel();
+            }
         }
         
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoseScreen();
-        }
+        
     }
 
     void GoNextLevel()
     {
+        BirdBagManager.Instance.ResetBag();
         SceneManager.LoadScene(nextLevelName);
     }
 
@@ -90,9 +104,16 @@ public class LevelController : MonoBehaviour
     void LoseScreen()
     {
         loseText.SetActive(true);
+        if (replayButtonLose)
+        {
+            ReloadLevel();
+        }
 
-        replayButtonLose.onClick.AddListener(ReloadLevel);
-        
-        menuButtonLose.onClick.AddListener(GoToMenu);
+        //Menu WIP
+        if (menuButtonLose)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
     }
 }
