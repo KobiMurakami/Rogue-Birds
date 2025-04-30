@@ -1010,6 +1010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewSlingShot
       objectReference: {fileID: 0}
+    - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2737,7 +2741,6 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
-
 --- !u!1 &1743021928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,7 +3574,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de945300f7232694ea9cdcf7fea29e9d, type: 3}
-
 --- !u!1001 &4116203949078695925
 PrefabInstance:
   m_ObjectHideFlags: 0
