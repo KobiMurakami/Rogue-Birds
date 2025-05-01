@@ -2,7 +2,6 @@ using UnityEngine;
 
 public abstract class Bird : MonoBehaviour
 {
-    public Sprite icon;
     public string birdName;
     public abstract float speedModifier { get; set; }
     public float isInMotion;

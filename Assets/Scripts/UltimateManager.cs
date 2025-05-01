@@ -1,56 +1,28 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System;
-using System.Collections;
 
 public class UltimateManager : MonoBehaviour
 {
-    public static UltimateManager Instance { get; private set; }
+    
+    [Header("Managers")]
+    public GameObject birdBagManager;
+    public GameObject bagInitializer;
+    public GameObject perkManager;
 
-    [Header("Manager Prefabs")]
-    public GameObject birdBagManagerPrefab;
-    public GameObject perkManagerPrefab;
-    public GameObject progressionManagerPrefab;
-    public GameObject loadoutManagerPrefab;
 
-    private void Awake()
+    void Start()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        //Instantiation Order
+        Instantiate(birdBagManager);
+        Instantiate(bagInitializer);
+        Instantiate(perkManager);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        InitializeManagers();
     }
 
-    private void InitializeManagers()
-    {
-        // BirdBagManager
-        if (!FindObjectOfType<BirdBagManager>())
-            Instantiate(birdBagManagerPrefab, transform);
-            
-        // PerkManager
-        if (!FindObjectOfType<PerkManager>())
-            Instantiate(perkManagerPrefab, transform);
-            
-        // ProgressionManager
-        if (!FindObjectOfType<ProgressionManager>())
-            Instantiate(progressionManagerPrefab, transform);
-            
-        // LoadoutManager (only when needed)
-        if (!FindObjectOfType<LoadoutManager>() && 
-            SceneManager.GetActiveScene().name == "Loadout")
-        {
-            Instantiate(loadoutManagerPrefab, transform);
-        }
-    }
-
-    public void CreateLoadoutManager()
-    {
-        if (!FindObjectOfType<LoadoutManager>())
-            Instantiate(loadoutManagerPrefab, transform);
-    }
+    //TODO potentially have this turn on the slingshots when entering each scene
 }

@@ -7,12 +7,14 @@ public class BombBird : Bird
     [SerializeField] private float explosionRadius = 5f;
     [SerializeField] private GameObject explosionEffect;
 
+    private Rigidbody2D rb;
 
     public override float speedModifier { get; set; } = 1f; // Adjust speed multiplier as needed
 
     protected override void Awake()
     {
         base.Awake();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public override void ActivateAbility()
@@ -32,7 +34,7 @@ public class BombBird : Bird
         foreach (Collider2D hit in colliders)
         {
             Rigidbody2D rbHit = hit.GetComponent<Rigidbody2D>();
-            if (rbHit != null && rbHit != GetComponent<Rigidbody2D>()) // Exclude self
+            if (rbHit != null && rbHit != rb) // Exclude self
             {
                 Vector2 direction = (Vector2)hit.transform.position - (Vector2)transform.position;
                 float distance = direction.magnitude;

@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82436cd18d5038a4d8e68f8f7573ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdBagManagerPrefab: {fileID: 2352628433156141294, guid: 7449d2233491b8444ae3dc16fd4dd987, type: 3}
-  perkManagerPrefab: {fileID: 2462501371818981737, guid: 88acb585d3a71034088c8d7e2b53eb14, type: 3}
-  progressionManagerPrefab: {fileID: 9166296500460853513, guid: 8887f861207eb384fb1f86d3e7d05fb8, type: 3}
-  loadoutManagerPrefab: {fileID: 7838681715985388492, guid: 85d5c23f58948884cb447d40bb733021, type: 3}
+  birdBagManager: {fileID: 2352628433156141294, guid: 7449d2233491b8444ae3dc16fd4dd987, type: 3}
+  bagInitializer: {fileID: 5217266096683956739, guid: 9b7ae605c1ef4c245b726f44b004c03a, type: 3}
+  perkManager: {fileID: 2462501371818981737, guid: 88acb585d3a71034088c8d7e2b53eb14, type: 3}
