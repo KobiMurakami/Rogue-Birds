@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8964182343215373230
+--- !u!1 &7838681715985388492
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1924443098497618602}
-  - component: {fileID: 695791377252563747}
+  - component: {fileID: 6078045151081739610}
+  - component: {fileID: 529222127543318892}
   m_Layer: 0
-  m_Name: Ultimate Manager
+  m_Name: LoadoutManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1924443098497618602
+--- !u!4 &6078045151081739610
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8964182343215373230}
+  m_GameObject: {fileID: 7838681715985388492}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5973623, y: 4.778885, z: -0.024569232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &695791377252563747
+--- !u!114 &529222127543318892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8964182343215373230}
+  m_GameObject: {fileID: 7838681715985388492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82436cd18d5038a4d8e68f8f7573ddf8, type: 3}
+  m_Script: {fileID: 11500000, guid: e8248033aa00e194cb64eec650d87089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdBagManagerPrefab: {fileID: 2352628433156141294, guid: 7449d2233491b8444ae3dc16fd4dd987, type: 3}
-  perkManagerPrefab: {fileID: 2462501371818981737, guid: 88acb585d3a71034088c8d7e2b53eb14, type: 3}
-  progressionManagerPrefab: {fileID: 9166296500460853513, guid: 8887f861207eb384fb1f86d3e7d05fb8, type: 3}
-  loadoutManagerPrefab: {fileID: 7838681715985388492, guid: 85d5c23f58948884cb447d40bb733021, type: 3}
+  availableBirdsPanel: {fileID: 0}
+  selectedBirdsPanel: {fileID: 0}
+  availablePerksPanel: {fileID: 0}
+  selectedPerksPanel: {fileID: 0}
+  birdCardPrefab: {fileID: 8183863510714213371, guid: 54108d704d526f64e9d393807e6d2b19, type: 3}
+  perkCardPrefab: {fileID: 6808820934068085982, guid: 054b00565382d3e45a41ef08d43a1f4d, type: 3}
+  confirmButton: {fileID: 0}
