@@ -20,7 +20,7 @@ public class SlingShot : MonoBehaviour
     [Header("Slingshot settings")]
     [SerializeField] private float maxDistance = 3.5f;
     [SerializeField] private float shotForce = 5f;
-    [SerializeField] private float respawnTime = 3f;
+    [SerializeField] private float respawnTime = 5f;
     private Vector2 direction;
     private Vector2 directionNormalized;
     private bool birdOnSlingshot;
@@ -39,6 +39,11 @@ public class SlingShot : MonoBehaviour
 
     public int rerollsLeft;
     public int shotsLeft;
+    public float timeSinceBirdShot;
+
+    public delegate void LevelFailed();
+    public static event LevelFailed OnLevelFail;
+    public Boolean failSignalSent = false;
 
     public GameObject levelManager;
     
@@ -73,7 +78,7 @@ public class SlingShot : MonoBehaviour
                 DrawSlingshot();
                 PositionAndRotateBird();
             }
-            
+
             //Bird launch
             if (Mouse.current.leftButton.wasReleasedThisFrame && birdOnSlingshot)
             {
@@ -82,6 +87,7 @@ public class SlingShot : MonoBehaviour
                 birdOnSlingshot = false;
                 shotsLeft--;
                 OnShotFired?.Invoke();
+
                 if (shotsLeft > 0)
                 {
                     StartCoroutine(spawnBirdAfterTime());
@@ -90,12 +96,11 @@ public class SlingShot : MonoBehaviour
         }
         else
         {
-            // levelManager = GameObject.FindGameObjectsWithTag("GameController")[0];
-            StartCoroutine(waitForGameOver());
-            
-            //This line is ass but necessary to prevent Null Reference on start up
-            GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<LevelController>().loseCondition = true;
-            //Should give time for objects falling, otherwise gameover will call right after last shot
+            if(!failSignalSent) {
+                Debug.Log("Out of Rerolls");
+                StartCoroutine(startFailLevel());
+                failSignalSent = true;
+            }
         }
     }
 
@@ -149,8 +154,10 @@ public class SlingShot : MonoBehaviour
         yield return new WaitForSeconds(respawnTime);
         SpawnBird();
     }
-
-    private IEnumerator waitForGameOver(){
-        yield return new WaitForSeconds(5);
+    private IEnumerator startFailLevel()
+    {
+        yield return new WaitForSeconds(7f);
+        Debug.Log("7 Seconds Passed, sending fail signal");
+        OnLevelFail?.Invoke();
     }
 }

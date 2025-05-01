@@ -424,11 +424,11 @@ GameObject:
   - component: {fileID: 2932704266679109251}
   m_Layer: 0
   m_Name: NewSlingShot
-  m_TagString: Untagged
+  m_TagString: Slingshot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &47172858591153556
 Transform:
   m_ObjectHideFlags: 0
@@ -479,6 +479,7 @@ MonoBehaviour:
   maxShots: 5
   rerollsLeft: 15
   shotsLeft: 5
+  levelManager: {fileID: 0}
 --- !u!1 &3642976755713863398
 GameObject:
   m_ObjectHideFlags: 0
