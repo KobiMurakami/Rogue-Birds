@@ -8,6 +8,7 @@ TagManager:
   - Rock
   - Bird
   - Enemy
+  - Boss Buttons
   layers:
   - Default
   - TransparentFX

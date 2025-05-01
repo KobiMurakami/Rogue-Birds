@@ -41,14 +41,14 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*var enemies = GameObject.FindWithTag("Enemy"); //find gameobjects with the tag "Enemy"
+        var enemies = GameObject.FindWithTag("Enemy"); //find gameobjects with the tag "Enemy"
 
         if (enemies == null)
         {
             {
                 WinScreen();
             }
-        }*/
+        }
 
         //Debug code for testing win and loss screens
         if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
@@ -104,16 +104,10 @@ public class LevelController : MonoBehaviour
     void LoseScreen()
     {
         loseText.SetActive(true);
-        if (replayButtonLose)
-        {
-            ReloadLevel();
-        }
+        replayButtonLose.onClick.AddListener(ReloadLevel);
 
-        //Menu WIP
-        if (menuButtonLose)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        //Menu 
+        menuButtonLose.onClick.AddListener(GoToMenu);
 
     }
 }
