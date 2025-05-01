@@ -15,6 +15,11 @@ class LightningBird : Bird
     
     float verticalOffset = 2f;
     
+    //Events 
+    
+    public delegate void LightningSpawned(GameObject lightning);
+    public static event LightningSpawned OnLightningSpawned;
+    
     
     //Weird ass Necessary Inheritance stuff
     [SerializeField] private float _speedModifier = 1.0f;
@@ -42,6 +47,7 @@ class LightningBird : Bird
     {
         yield return new WaitForSeconds(timeDifference);
         Vector2 lightningSpawn = new Vector2(transform.position.x, transform.position.y + verticalOffset);
-        Instantiate(lightning, lightningSpawn, Quaternion.identity);
+        GameObject newLightning = Instantiate(lightning, lightningSpawn, Quaternion.identity);
+        OnLightningSpawned?.Invoke(newLightning);
     }
 }

@@ -8,9 +8,10 @@ public class LevelController : MonoBehaviour
 {
     public string nextLevelName;
     public string levelName;
+    public int currentLevelNumber;
 
     public Scoring scoreManager;
-    public bool loseCondition;
+    public bool loseCondition = false;
     
     //Win and Lose screens for the game 
     public GameObject winText;
@@ -32,6 +33,7 @@ public class LevelController : MonoBehaviour
         winText.SetActive(false);
         loseText.SetActive(false);
         scoreManager = GetComponent<Scoring>();
+        SlingShot.OnLevelFail += LevelOnLevelFail;
     }
     private void OnEnable()
     {
@@ -45,12 +47,26 @@ public class LevelController : MonoBehaviour
 
         if (enemies == null)
         {
-            {
-                WinScreen();
-            }
+            PlayerPrefs.SetInt("currentScore", scoreManager.GetComponent<Scoring>().score);
+            WinScreen();
         }
 
-        //Debug code for testing win and loss screens
+        if(loseCondition) {
+            Debug.Log("Lose Condition Triggered");
+
+            int highScore = PlayerPrefs.GetInt("highscore", 0);
+            int currentScore = scoreManager.GetComponent<Scoring>().score;
+            if(currentScore >= highScore) {
+                PlayerPrefs.SetInt("highscore", currentScore);
+            }
+            if(currentLevelNumber >= PlayerPrefs.GetInt("highestlevel", 0)) {
+                PlayerPrefs.SetInt("highestlevel", currentLevelNumber);
+            }
+
+            LoseScreen();
+        }
+
+        // Debug code for testing win and loss screens
         if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
         {
             winText.SetActive(true);
@@ -103,11 +119,16 @@ public class LevelController : MonoBehaviour
     
     void LoseScreen()
     {
+        Debug.Log("Lose Screen Activated");
         loseText.SetActive(true);
-        replayButtonLose.onClick.AddListener(ReloadLevel);
 
-        //Menu 
+        replayButtonLose.onClick.AddListener(ReloadLevel);
         menuButtonLose.onClick.AddListener(GoToMenu);
 
+    }
+
+    void LevelOnLevelFail() {
+        Debug.Log("Recieved level fail signal");
+        loseCondition = true;
     }
 }

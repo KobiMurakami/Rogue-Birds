@@ -9,9 +9,14 @@ public class BreakableBlock : MonoBehaviour
     public enum BlockType { Glass, Wood, Stone, Steel }
     [SerializeField] private BlockType blockType;
     [SerializeField] private ParticleSystem breakEffect;
+    [SerializeField] private AudioClip breakSound;
+    [SerializeField] private AudioClip hitSound;
+    private AudioSource audioSource;
+    private bool hasBroken = false;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         switch (blockType)
         {
             case BlockType.Glass:
@@ -37,6 +42,8 @@ public class BreakableBlock : MonoBehaviour
 
     public void DamageBlock(float damageAmount)
     {
+        if (hasBroken) return;
+        
         _currentHealth -= damageAmount;
 
         if (_currentHealth <= 0f)
@@ -47,8 +54,25 @@ public class BreakableBlock : MonoBehaviour
 
     private void Break()
     {
+        if(hasBroken) return;
+        hasBroken = true;
+        
         if (breakEffect != null)
             Instantiate(breakEffect, transform.position, Quaternion.identity);
+        
+        if (audioSource && breakSound != null)
+        {
+            GameObject tempAudio = new GameObject("breakSound");
+            AudioSource tempSource = tempAudio.AddComponent<AudioSource>();
+            tempSource.clip = breakSound;
+            tempSource.Play();
+            Destroy(tempAudio, breakSound.length);
+            //audioSource.PlayOneShot(breakSound);
+        }
+        MeshRenderer meshrender = GetComponent<MeshRenderer>();
+        if(meshrender) meshrender.enabled = false;
+        Collider col = GetComponent<Collider>();
+        if(col) col.enabled = false;
         Destroy(gameObject);
     }
 
@@ -58,7 +82,18 @@ public class BreakableBlock : MonoBehaviour
 
         if (impactVelocity > damageThreshold)
         {
-            DamageBlock(impactVelocity);
+            if (blockType == BlockType.Steel)
+            {
+                if (hitSound != null && audioSource != null && !audioSource.isPlaying)
+                {
+                    audioSource.PlayOneShot(hitSound);
+                }
+            }
+            else
+            {
+                DamageBlock(impactVelocity);
+            }
+            
         }
     }
 }

@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -6,6 +7,8 @@ public class BirdBagManager : MonoBehaviour
 {
     public static BirdBagManager Instance { get; set; }
 
+
+    public List<Bird> allBirdTypes = new List<Bird>();
     public List<Bird> birdBag = new List<Bird>();
     public List<Bird> temporarilyNotInBag = new List<Bird>();
     
@@ -141,5 +144,21 @@ public class BirdBagManager : MonoBehaviour
         {
             Debug.LogWarning("Attempted to remove a bird that is either null or not in the bag!");
         }
+    }
+
+    //Remove random bird in bag
+    public void RemoveRandomBirdFromBag(){
+        birdBag.Remove(GetRandomBird());
+    }
+
+    //---------------New Stuff for between rounds---------------------
+    //Gets a random type of bird
+    public Bird GetRandomBirdType(){
+        return allBirdTypes[Random.Range(0, allBirdTypes.Count)];
+    }
+
+    //Adds random bird from total pool to bag
+    public void AddRandomBirdToBag(){
+        AddBird(GetRandomBirdType());
     }
 }
