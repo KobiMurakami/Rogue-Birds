@@ -2,48 +2,68 @@ using UnityEngine;
 
 public class BossButton : MonoBehaviour
 {
-    bool isPressed = false;
     public GameObject weakPoint;
     public GameObject button1;
     public GameObject button2;
-    bool isPressed1 = false;
-    bool isPressed2 = false;
+    public bool isPressed1 = false;
+    public bool isPressed2 = false;
+    
+    public int pressedCount;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         weakPoint.SetActive(false);
+        pressedCount = 0;
     }
     
     // Update is called once per frame
     void Update()
     {
-        var buttons = GameObject.FindWithTag("Boss Buttons"); //find gameobjects with the tag "Boss Buttons"
+        //var buttons = GameObject.FindWithTag("Boss Buttons"); //find game objects with the tag "Boss Buttons"
 
-        if (buttons == null)
+        //Method 1
+        if (isPressed1 && isPressed2)
         {
             weakPoint.SetActive(true);
-            Debug.Log("Weak Point SHOULD be revealed!");
+            Debug.Log("Weak Point Button SHOULD be revealed through the isPressed method!");
+        }
+        
+        //Method 2
+        if (pressedCount >= 2)
+        {
+            weakPoint.SetActive(true);
+            Debug.Log("Weak Point Button SHOULD be revealed through the Notify method!");
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Bird"))
         {
             if (gameObject == button1)
             {
-                isPressed1 = true;
-                Destroy(button1);
+                NotifyTargetDestroyed();
+                isPressed1 = true; 
+                button1.SetActive(false);
                 Debug.Log("Button1 Pressed");
             }
 
-            if (gameObject == button2)
+            else if (gameObject == button2)
             {
+                NotifyTargetDestroyed();
                 isPressed2 = true;
-                Destroy(button2);
+                button2.SetActive(false);
                 Debug.Log("Button2 Pressed");
             }
         }
+    }
+
+    
+    
+    private void NotifyTargetDestroyed()
+    {
+        pressedCount++;
+        Debug.Log("Button Pressed count " + pressedCount);
     }
 }

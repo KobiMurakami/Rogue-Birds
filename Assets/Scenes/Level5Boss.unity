@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1cfbf109d9f240abc504b1613f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Level4
+  nextLevelName: EndingScreen
   levelName: Level3
   scoreManager: {fileID: 0}
   loseCondition: 0
@@ -2336,6 +2336,7 @@ GameObject:
   - component: {fileID: 1651049473}
   - component: {fileID: 1651049472}
   - component: {fileID: 1651049471}
+  - component: {fileID: 1651049475}
   m_Layer: 0
   m_Name: Button 2
   m_TagString: Boss Buttons
@@ -2350,7 +2351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651049470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46168e226a4d6664cb03e2bdf2888014, type: 3}
   m_Name: 
@@ -2358,6 +2359,9 @@ MonoBehaviour:
   weakPoint: {fileID: 3088028615729106419}
   button1: {fileID: 3088028615513626158}
   button2: {fileID: 1651049470}
+  isPressed1: 0
+  isPressed2: 0
+  pressedCount: 0
 --- !u!61 &1651049472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2474,6 +2478,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651049475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651049470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fce15db70a94a4495665d93b4ff947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1958442388}
 --- !u!1001 &1687614306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2603,6 +2620,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1958442385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1958442387}
+  - component: {fileID: 1958442386}
+  - component: {fileID: 1958442388}
+  m_Layer: 0
+  m_Name: WeakPointObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1958442386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958442385}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46168e226a4d6664cb03e2bdf2888014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weakPoint: {fileID: 3088028615729106419}
+  button1: {fileID: 3088028615513626158}
+  button2: {fileID: 1651049470}
+  isPressed1: 0
+  isPressed2: 0
+  pressedCount: 0
+--- !u!4 &1958442387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958442385}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 549.82385, y: 62.403885, z: 133.60263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958442388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958442385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f9f78878a136745a3d7d91253f7441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weakPoint: {fileID: 3088028615729106419}
 --- !u!1 &1984801313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,6 +2953,7 @@ GameObject:
   - component: {fileID: 4489793167924565257}
   - component: {fileID: 8718061531559749344}
   - component: {fileID: 8718061531559749345}
+  - component: {fileID: 8718061531559749346}
   m_Layer: 0
   m_Name: Button 1
   m_TagString: Boss Buttons
@@ -3106,7 +3188,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3088028615513626158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46168e226a4d6664cb03e2bdf2888014, type: 3}
   m_Name: 
@@ -3114,6 +3196,22 @@ MonoBehaviour:
   weakPoint: {fileID: 3088028615729106419}
   button1: {fileID: 3088028615513626158}
   button2: {fileID: 1651049470}
+  isPressed1: 0
+  isPressed2: 0
+  pressedCount: 0
+--- !u!114 &8718061531559749346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3088028615513626158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fce15db70a94a4495665d93b4ff947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1958442388}
 --- !u!61 &8718061531812986173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3167,7 +3265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3088028615729106419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46168e226a4d6664cb03e2bdf2888014, type: 3}
   m_Name: 
@@ -3175,6 +3273,9 @@ MonoBehaviour:
   weakPoint: {fileID: 3088028615729106419}
   button1: {fileID: 3088028615513626158}
   button2: {fileID: 1651049470}
+  isPressed1: 0
+  isPressed2: 0
+  pressedCount: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3194,3 +3295,4 @@ SceneRoots:
   - {fileID: 1651049474}
   - {fileID: 1497811896}
   - {fileID: 1307461078}
+  - {fileID: 1958442387}

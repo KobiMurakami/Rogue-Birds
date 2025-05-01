@@ -104,16 +104,10 @@ public class LevelController : MonoBehaviour
     void LoseScreen()
     {
         loseText.SetActive(true);
-        if (replayButtonLose)
-        {
-            ReloadLevel();
-        }
+        replayButtonLose.onClick.AddListener(ReloadLevel);
 
-        //Menu WIP
-        if (menuButtonLose)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        //Menu 
+        menuButtonLose.onClick.AddListener(GoToMenu);
 
     }
 }
