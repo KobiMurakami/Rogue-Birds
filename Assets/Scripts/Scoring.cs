@@ -28,7 +28,7 @@ public class Scoring : MonoBehaviour
     }
 
     void EnemyOnEnemyDeath(String type) {
-        if(type.Equals("Enemy")){
+        if(type.Equals("basic")){
             score += 100;
             numEnemiesKilled += 1;
         }
