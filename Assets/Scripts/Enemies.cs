@@ -5,9 +5,11 @@ public class Enemies : MonoBehaviour
 {
     [SerializeField] private float _maxHealth = 3f;
     [SerializeField] private float _damageThreshold = 0.2f;
+    [SerializeField] private AudioClip deathSound;
     private float _currentHealth;
     private Animator animator;
     private bool isDying = false;
+    private AudioSource audioSource;
 
     public delegate void EnemyDied(String type);
     public static event EnemyDied OnEnemyDeath;
@@ -16,6 +18,7 @@ public class Enemies : MonoBehaviour
     {
         _currentHealth = _maxHealth;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void DamageEnemy(float damageAmount)
@@ -36,6 +39,15 @@ public class Enemies : MonoBehaviour
 
         animator.SetTrigger("Die");
         OnEnemyDeath?.Invoke("basic");
+
+        if (deathSound != null)
+        {
+            GameObject tempAudio = new GameObject("EnemyDeathSound");
+            AudioSource tempSource = tempAudio.AddComponent<AudioSource>();
+            tempSource.clip = deathSound;
+            tempSource.Play();
+            Destroy(tempAudio, deathSound.length);
+        }
         //GetComponent<Collider2D>().enabled = false;
         Destroy(gameObject, 1.0f);
     }
