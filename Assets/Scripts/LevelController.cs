@@ -116,4 +116,10 @@ public class LevelController : MonoBehaviour
         }
 
     }
+
+    public void StartLevel()
+    {
+        GameObject slingshot = GameObject.FindWithTag("slingshot");
+        slingshot.SetActive(true);
+    }
 }
