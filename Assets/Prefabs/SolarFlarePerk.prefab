@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2352628433156141294
+--- !u!1 &8997422370317896276
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1823127868449989873}
-  - component: {fileID: 188112682053736897}
+  - component: {fileID: 3372833966939824814}
+  - component: {fileID: 9219827929549382216}
   m_Layer: 0
-  m_Name: BirdBagManager
+  m_Name: SolarFlarePerk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1823127868449989873
+--- !u!4 &3372833966939824814
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2352628433156141294}
+  m_GameObject: {fileID: 8997422370317896276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,22 +32,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &188112682053736897
+--- !u!114 &9219827929549382216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2352628433156141294}
+  m_GameObject: {fileID: 8997422370317896276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf0c6fd0f6bed14c84d8849593d2279, type: 3}
+  m_Script: {fileID: 11500000, guid: 67783b96d6d977c4b824ae1522e3381d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allBirdTypes:
-  - {fileID: 8074150365811040883, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
-  - {fileID: 3190684376382082632, guid: 2d3eaefa53bef9941ba49619083f5821, type: 3}
-  - {fileID: -3387659799506037687, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
-  - {fileID: -339026737000156301, guid: 00b0d29968981a54682841a68034617a, type: 3}
-  birdBag: []
-  temporarilyNotInBag: []
