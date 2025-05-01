@@ -8,22 +8,45 @@ public class Lightning : MonoBehaviour
     public float explosionRadius = 3f;
     public float explosionForce = 500f;
     public LayerMask affectedLayers;
+    
+    private bool solarFlareActive = false;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
-        //Explodes in the general area
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, affectedLayers);
-        foreach (Collider2D col in colliders)
+        if (solarFlareActive)
         {
-            Rigidbody2D rb = col.attachedRigidbody;
-            if (rb != null)
+            //SolarFlare Modifier
+            //Destroys all affected objects within radius
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, affectedLayers);
+            foreach (Collider2D col in colliders)
             {
-                Vector2 direction = (rb.position - (Vector2)transform.position).normalized;
-                rb.AddForce(direction * explosionForce);
+                if (col.gameObject != gameObject)
+                {
+                    if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("LevelMats"))
+                    {
+                        Destroy(col.gameObject);
+                    }
+                }
             }
+            //---------------------TODO create a cool visual flash---------------------------------------
+            Destroy(gameObject); 
         }
-        Destroy(gameObject);
+        else
+        {
+            //Explodes in the general area, Regular Activation
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, affectedLayers);
+            foreach (Collider2D col in colliders)
+            {
+                Rigidbody2D rb = col.attachedRigidbody;
+                if (rb != null)
+                {
+                    Vector2 direction = (rb.position - (Vector2)transform.position).normalized;
+                    rb.AddForce(direction * explosionForce);
+                }
+            }
+
+            Destroy(gameObject);
+        }
     }
 
     // Debug visualization in editor
@@ -31,5 +54,10 @@ public class Lightning : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
+
+    public void SetSolarFlareActive()
+    {
+        solarFlareActive = true;
     }
 }

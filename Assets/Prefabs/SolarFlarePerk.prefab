@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2462501371818981737
+--- !u!1 &8997422370317896276
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7280925583260612267}
-  - component: {fileID: 3807841889880522245}
+  - component: {fileID: 3372833966939824814}
+  - component: {fileID: 9219827929549382216}
   m_Layer: 0
-  m_Name: PerkManager
+  m_Name: SolarFlarePerk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7280925583260612267
+--- !u!4 &3372833966939824814
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2462501371818981737}
+  m_GameObject: {fileID: 8997422370317896276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,24 +32,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3807841889880522245
+--- !u!114 &9219827929549382216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2462501371818981737}
+  m_GameObject: {fileID: 8997422370317896276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 448399b37a3c6ca438ab6ad8fe1c005f, type: 3}
+  m_Script: {fileID: 11500000, guid: 67783b96d6d977c4b824ae1522e3381d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allPerks:
-  - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
-  - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
-  - {fileID: 8997422370317896276, guid: fb9fbd958f4c9274d94801c3b8966463, type: 3}
-  - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
-  - {fileID: 8997422370317896276, guid: a9baa122802d12e46927ac6d4eb9ac49, type: 3}
-  - {fileID: 8997422370317896276, guid: 292e77d3e0a797b498764c239a554487, type: 3}
-  activePerks: []
-  maxPerks: 30
