@@ -80,7 +80,7 @@ public class SlingShot : MonoBehaviour
             }
 
             //Bird launch
-            if (Mouse.current.leftButton.wasReleasedThisFrame && birdOnSlingshot)
+            if (Mouse.current.leftButton.wasReleasedThisFrame && birdOnSlingshot && clickedWithinArea) //Fixed the click bug
             {
                 clickedWithinArea = false;
                 spawnedBird.LaunchBird(direction, shotForce);
