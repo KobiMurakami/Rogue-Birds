@@ -1,23 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndScreen : MonoBehaviour
 {
-    public GameObject restartRunButton;
-    public GameObject menuButton;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        restartRunButton.SetActive(true);
-    }
+    public Button restartRunButton;
+    public Button menuButton;
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        //restartRunButton.onClick.AddListener(BackToStart);
+        //Restart Run
+        restartRunButton.onClick.AddListener(BackToStart);
         
         //Menu
-        //menuButton.onClick.AddListener(GoToMenu);
+        menuButton.onClick.AddListener(GoToMenu);
     }
     
     void GoToMenu()
