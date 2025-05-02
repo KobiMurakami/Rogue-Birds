@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
+using NUnit.Framework.Interfaces;
 
 public class LoadoutUIController : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class LoadoutUIController : MonoBehaviour
     void Start()
     {
         LevelController lC = FindAnyObjectByType<LevelController>();
-        _currentLevel = int.Parse(lC.levelName);
+        _currentLevel = ParseLevelNumber(lC.levelName);
         PopulateOptions();
         confirmButton.onClick.AddListener(ConfirmSelections);
     }
@@ -24,6 +26,15 @@ public class LoadoutUIController : MonoBehaviour
     {
         ClearContainer(birdContainer);
         ClearContainer(perkContainer);
+
+        if(birdCardPrefab == null){
+            Debug.LogError("BirdCardPrefab is missing");
+            return;
+        }
+        if(perkCardPrefab == null){
+            Debug.LogError("perkCardPrefab is missing");
+            return;
+        }
 
         // Birds
         foreach (Bird bird in ProgressionManager.Instance.GetAvailableBirds(_currentLevel))
@@ -64,7 +75,7 @@ public class LoadoutUIController : MonoBehaviour
         }
     }
 
-    void ConfirmSelections()
+    public void ConfirmSelections()
     {
         ProgressionManager.Instance.ApplySelections();
         ProgressionManager.Instance.InitializeSlingshot();
@@ -77,5 +88,18 @@ public class LoadoutUIController : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+    }
+
+    int ParseLevelNumber(string levelName)
+    {
+        // Extract numeric part using regex
+        Match match = Regex.Match(levelName, @"\d+");
+        if (match.Success && int.TryParse(match.Value, out int level))
+        {
+            return level;
+        }
+        
+        Debug.LogError($"Could not parse level number from {levelName}! Defaulting to 1");
+        return 1;
     }
 }

@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0300ed2042044c54aafb64be955fc389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprite: {fileID: 8790216873792860580, guid: 133b414412675504abc7ca03c03aafa1, type: 3}
   birdName: Bomb
   isInMotion: 0
   explosionForce: 50

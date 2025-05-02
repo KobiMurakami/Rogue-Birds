@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c0a414288367f4a96edcde767fb1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprite: {fileID: 7365120070524092099, guid: 133b414412675504abc7ca03c03aafa1, type: 3}
   birdName: Bouncy
   isInMotion: 0
   _speedModifier: 1.1

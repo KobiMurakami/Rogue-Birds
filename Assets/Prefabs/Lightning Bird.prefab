@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264ff80399a77a84788e63c9a2d9bf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprite: {fileID: -868395883712801939, guid: 133b414412675504abc7ca03c03aafa1, type: 3}
   birdName: Lightning
   isInMotion: 0
   lightningBirdChannel: {fileID: 2437420349220769953}

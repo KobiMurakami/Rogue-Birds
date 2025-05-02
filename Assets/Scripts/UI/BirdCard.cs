@@ -18,11 +18,20 @@ public class BirdCard : MonoBehaviour
 
     public void Initialize(Bird bird, System.Action<Bird> onClick)
     {
-        _bird = bird;
-        _onClick = onClick;
-        icon.sprite = bird.cardSprite;
-        nameText.text = bird.name;
-        toggle.onValueChanged.AddListener(ToggleSelection);
+        try
+        {
+            _bird = bird;
+            _onClick = onClick;
+            icon.sprite = bird.cardSprite;
+            nameText.text = bird.name;
+            toggle.onValueChanged.AddListener(ToggleSelection);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"BirdCard Initialize failed: {e.Message}");
+            gameObject.SetActive(false);
+        }
+        
     }
 
     void ToggleSelection(bool isOn)

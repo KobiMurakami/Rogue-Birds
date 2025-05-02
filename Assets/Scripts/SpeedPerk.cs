@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpeedPerk : MonoBehaviour
 {
+    public Sprite icon;
+    public String description;
     private void Start()
     {
         foreach (Bird bird in BirdBagManager.Instance.birdBag)
