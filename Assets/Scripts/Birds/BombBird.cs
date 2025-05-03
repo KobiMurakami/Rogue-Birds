@@ -7,14 +7,20 @@ public class BombBird : Bird
     [SerializeField] private float explosionRadius = 5f;
     [SerializeField] private GameObject explosionEffect;
 
-    private Rigidbody2D rb;
+    //private Rigidbody2D rb;
 
-    public override float speedModifier { get; set; } = 1f; // Adjust speed multiplier as needed
+    //Weird ass Necessary Inheritance stuff
+    [SerializeField] private float _speedModifier = 1.0f;
 
+    public override float speedModifier
+    {
+        get { return _speedModifier; }
+        set { _speedModifier = value; }
+    }
     protected override void Awake()
     {
         base.Awake();
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     public override void ActivateAbility()

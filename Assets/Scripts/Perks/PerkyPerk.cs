@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PerkyPerk : MonoBehaviour
+public class PerkyPerk : Perk
 {
     //For every perk that is activated, activate another one
     //Hopefully doesn't endless loop itself

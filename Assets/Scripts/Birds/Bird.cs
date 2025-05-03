@@ -8,7 +8,7 @@ public abstract class Bird : MonoBehaviour
     public abstract float speedModifier { get; set; }
     public float isInMotion;
 
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
     private CircleCollider2D circleCollider;
     private bool hasBeenLaunched;
     private bool shouldFaceVelocityDirection;

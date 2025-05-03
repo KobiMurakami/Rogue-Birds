@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class HeavyWeightPerk : MonoBehaviour
+public class HeavyWeightPerk : Perk
 {
     //Adds 5% more weight on each enemy killed
     void Start()
