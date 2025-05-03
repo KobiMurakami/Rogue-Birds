@@ -475,10 +475,11 @@ MonoBehaviour:
   slingShotArea: {fileID: 9138076998264688331}
   birdPosOffset: 0.2
   activeBird: {fileID: 0}
-  maxRerolls: 15
-  maxShots: 5
+  massMultiplier: 1
   rerollsLeft: 15
   shotsLeft: 5
+  timeSinceBirdShot: 0
+  failSignalSent: 0
   levelManager: {fileID: 0}
 --- !u!1 &3642976755713863398
 GameObject:

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -218795805305758247, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
   perkName: Solar Flare
-  perkDescription: XXX
+  perkDescription: Thundrake's lightning now destoys its victims.
 --- !u!212 &-6333622333990668409
 SpriteRenderer:
   m_ObjectHideFlags: 0

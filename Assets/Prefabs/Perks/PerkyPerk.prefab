@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 8035294450588639211, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
   perkName: Perky Perk
-  perkDescription: XXX
+  perkDescription: Everytime you get a perk, get one more random one!
 --- !u!212 &4174794180330060451
 SpriteRenderer:
   m_ObjectHideFlags: 0

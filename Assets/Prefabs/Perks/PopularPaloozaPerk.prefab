@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3372833966939824814}
   - component: {fileID: -7930469987691827560}
+  - component: {fileID: 464911157663547707}
   m_Layer: 0
   m_Name: PopularPaloozaPerk
   m_TagString: Untagged
@@ -87,3 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &464911157663547707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997422370317896276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81da5ba8682bc241b9b01df5f92d53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSprite: {fileID: 803579367694548535, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  perkName: Popular Palooza
+  perkDescription: Get an extra bird added to your bag at the start of each round!

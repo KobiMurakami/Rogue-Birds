@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf0c6fd0f6bed14c84d8849593d2279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedMultiplier: 1
+  massMultiplier: 1
   maxRerolls: 5
   maxShots: 5
   allBirdTypes:

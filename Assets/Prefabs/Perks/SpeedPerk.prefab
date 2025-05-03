@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 3620033210121314325, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
-  perkName: XXX
-  perkDescription: XXX
+  perkName: Speedy
+  perkDescription: Double the speed of all birds
 --- !u!212 &4341405041077930199
 SpriteRenderer:
   m_ObjectHideFlags: 0

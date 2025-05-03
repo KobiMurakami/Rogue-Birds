@@ -103,7 +103,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 1
@@ -116,7 +116,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &3652561058888542931
 CircleCollider2D:
@@ -174,7 +174,7 @@ MonoBehaviour:
   needlePrefab: {fileID: 6799989935912347481, guid: ffaa5ca38d4af52448723c6685bb6bb9, type: 3}
   numberOfNeedles: 12
   shootForce: 5
-  _speedModifier: 1
+  _speedModifier: 1.5
 --- !u!95 &1768175053715317825
 Animator:
   serializedVersion: 7
