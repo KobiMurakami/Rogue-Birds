@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 5852359731530370230, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
-  birdName: Bouncy
+  birdName: Ricocrow
+  birdDescription: 
   isInMotion: 0
   _speedModifier: 1.1

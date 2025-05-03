@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,14 @@ public class AbilityGenerator : MonoBehaviour
     public Button button1;
     public Button button2;
     public Button button3;
+
+    public TextMeshProUGUI button1Title;
+    public TextMeshProUGUI button2Title;
+    public TextMeshProUGUI button3Title;
+    
+    public TextMeshProUGUI button1Description;
+    public TextMeshProUGUI button2Description;
+    public TextMeshProUGUI button3Description;
     
     private Bird but1Bird;
     private GameObject but2Perk;
@@ -33,6 +42,7 @@ public class AbilityGenerator : MonoBehaviour
         but2Perk = PerkManager.Instance.GetRandomPerk();
 
         button1.GetComponent<Image>().sprite = but1Bird.cardSprite;
+        //button1.
         button2.GetComponent<Image>().sprite = but2Perk.GetComponent<SpriteRenderer>().sprite;
     }
 

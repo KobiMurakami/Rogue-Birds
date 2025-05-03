@@ -4,6 +4,7 @@ public abstract class Bird : MonoBehaviour
 {
     public Sprite cardSprite;
     public string birdName;
+    public string birdDescription;
     public abstract float speedModifier { get; set; }
     public float isInMotion;
 

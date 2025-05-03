@@ -166,7 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -2545714351582031314, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
-  birdName: Bomb
+  birdName: Ashwing
+  birdDescription: Blow your enemies to smitherines with a massive explosion!
   isInMotion: 0
   explosionForce: 50
   explosionRadius: 10

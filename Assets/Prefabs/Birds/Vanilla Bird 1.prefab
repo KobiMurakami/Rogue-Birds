@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -7554236323168992753, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
-  birdName: Bobby
+  birdName: Captain Plain
+  birdDescription: 
   isInMotion: 0
   _speedModifier: 0.8
