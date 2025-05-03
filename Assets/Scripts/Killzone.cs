@@ -6,8 +6,8 @@ public class Killzone : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("KillZone touched: " + other.name);
-                    Destroy(other.gameObject);
+            Debug.Log("KillZone touched: " + other.name); 
+            other.gameObject.GetComponent<Enemies>().Die();
         }
         
     }
