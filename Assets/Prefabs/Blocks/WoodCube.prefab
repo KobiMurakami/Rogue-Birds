@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -2253780365812892899}
   - component: {fileID: 3931143575710680253}
   - component: {fileID: -987449856694286293}
+  - component: {fileID: -754003977100712135}
   m_Layer: 0
   m_Name: WoodCube
   m_TagString: Untagged
@@ -259,3 +260,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-754003977100712135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6730042259709422013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8466bdd807ec64b8cece9dc2a8c0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  damageThreshold: 0.5
+  blockType: 1
+  breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 8300000, guid: e4fe409ebbd2eff4b82bc0c10ddf33f5, type: 3}
+  hitSound: {fileID: 0}
