@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -1769065797956263418, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
   birdName: Thundrake
-  birdDescription: 
+  birdDescription: Call upon zues to destory your opposition
   isInMotion: 0
   lightningBirdChannel: {fileID: 2437420349220769953}
   lightningBirdSound: {fileID: 8300000, guid: bffcf5bd6cc7d784eb20a83d4c934840, type: 3}
@@ -176,7 +176,7 @@ MonoBehaviour:
   lightningBirdPitch: 2
   lightning: {fileID: 6799989935912347481, guid: 726b868718940ff419156a5f6b6ae704, type: 3}
   lightingTimeDifference: 0.2
-  _speedModifier: 1
+  _speedModifier: 2
 --- !u!82 &2437420349220769953
 AudioSource:
   m_ObjectHideFlags: 0

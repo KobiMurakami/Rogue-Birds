@@ -42,8 +42,12 @@ public class AbilityGenerator : MonoBehaviour
         but2Perk = PerkManager.Instance.GetRandomPerk();
 
         button1.GetComponent<Image>().sprite = but1Bird.cardSprite;
-        //button1.
+        button1Title.text = but1Bird.birdName;
+        button1Description.text = but1Bird.birdDescription;
+        
         button2.GetComponent<Image>().sprite = but2Perk.GetComponent<SpriteRenderer>().sprite;
+        //button2Title.text = ;
+        //button2Description.text = ;
     }
 
     //Add Bird
