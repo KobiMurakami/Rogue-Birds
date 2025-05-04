@@ -9,6 +9,8 @@ TagManager:
   - Bird
   - Enemy
   - Boss Buttons
+  - Slingshot
+  - Boss Projectile
   layers:
   - Default
   - TransparentFX
