@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class BouncyBonusPerk : MonoBehaviour
+public class BouncyBonusPerk : Perk
 {
     
     private void Start()

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class SolarFlarePerk : MonoBehaviour
+public class SolarFlarePerk : Perk
 {
     void Start()
     {

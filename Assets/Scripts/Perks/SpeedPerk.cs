@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedPerk : MonoBehaviour
+public class SpeedPerk : Perk
 {
     private void Start()
     {

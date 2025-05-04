@@ -8,6 +8,9 @@ public class BirdBagManager : MonoBehaviour
     public static BirdBagManager Instance { get; set; }
 
 
+    public int maxRerolls;
+    public int maxShots;
+    
     public List<Bird> allBirdTypes = new List<Bird>();
     public List<Bird> birdBag = new List<Bird>();
     public List<Bird> temporarilyNotInBag = new List<Bird>();

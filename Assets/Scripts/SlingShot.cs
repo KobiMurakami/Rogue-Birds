@@ -34,8 +34,7 @@ public class SlingShot : MonoBehaviour
     public Bird activeBird;
 
     
-    [SerializeField] private int maxRerolls;
-    [SerializeField] private int maxShots;
+    
 
     public int rerollsLeft;
     public int shotsLeft;
@@ -59,8 +58,8 @@ public class SlingShot : MonoBehaviour
     {
         //PROBLEM if slingshot is created before bag manager, use Ultimate Manager to make slingshot
         SpawnBird();
-        rerollsLeft = maxRerolls;
-        shotsLeft = maxShots;
+        rerollsLeft = BirdBagManager.Instance.maxRerolls;
+        shotsLeft = BirdBagManager.Instance.maxShots;
     }
 
     private void Update()
