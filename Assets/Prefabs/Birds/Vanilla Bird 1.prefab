@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -7554236323168992753, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
   birdName: Captain Plain
-  birdDescription: 
+  birdDescription: He's happy to be here!
   isInMotion: 0
   captainPlainClip: {fileID: 8300000, guid: 552172168d983b84a978cad48eae3223, type: 3}
   vanillaAudioSource: {fileID: 1902419380360706510}

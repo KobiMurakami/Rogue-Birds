@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea15b78259e76448b1a9ee6bd77edc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: -6238665479270652099, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  cardSprite: {fileID: 1686274403508471393, guid: 58e20baf43b484342a3e6824d79b7210, type: 3}
   perkName: Bouncy Bonus
   perkDescription: Every enemy you kill with Ricocrow grants you one more permanent
     reroll!
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6238665479270652099, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  m_Sprite: {fileID: 1686274403508471393, guid: 58e20baf43b484342a3e6824d79b7210, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

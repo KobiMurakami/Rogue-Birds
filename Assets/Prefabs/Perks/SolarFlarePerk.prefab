@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67783b96d6d977c4b824ae1522e3381d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: -218795805305758247, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  cardSprite: {fileID: 4613159184183262247, guid: e8cc99a5fe8f12c4f8ddcd999dc1b8d1, type: 3}
   perkName: Solar Flare
   perkDescription: Thundrake's lightning now destoys its victims.
 --- !u!212 &-6333622333990668409
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -218795805305758247, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  m_Sprite: {fileID: 4613159184183262247, guid: e8cc99a5fe8f12c4f8ddcd999dc1b8d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

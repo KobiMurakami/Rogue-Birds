@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122a31ad02271b54db1ac87ab56502b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 8035294450588639211, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  cardSprite: {fileID: 21300000, guid: d1e847155bb5ca84189aeb99be445a01, type: 3}
   perkName: Perky Perk
   perkDescription: Everytime you get a perk, get one more random one!
 --- !u!212 &4174794180330060451
@@ -92,12 +92,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8035294450588639211, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1e847155bb5ca84189aeb99be445a01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.22}
+  m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
