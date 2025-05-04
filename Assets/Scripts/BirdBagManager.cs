@@ -8,6 +8,8 @@ public class BirdBagManager : MonoBehaviour
     public static BirdBagManager Instance { get; set; }
 
 
+    public float speedMultiplier;
+    public float massMultiplier;
     public int maxRerolls;
     public int maxShots;
     
@@ -36,6 +38,7 @@ public class BirdBagManager : MonoBehaviour
     public void AddBird(Bird bird)
     {
         birdBag.Add(bird);
+        
         OnBirdAdded?.Invoke(bird);
     }
     

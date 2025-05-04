@@ -33,9 +33,9 @@ public class SlingShot : MonoBehaviour
     [Header("Rogue-like settings")]
     public Bird activeBird;
 
-    
-    
 
+
+    
     public int rerollsLeft;
     public int shotsLeft;
     public float timeSinceBirdShot;
@@ -137,9 +137,19 @@ public class SlingShot : MonoBehaviour
         Vector2 spawnPosition = (Vector2)idlePosition.position + dir * birdPosOffset;
         
         activeBird = BirdBagManager.Instance.GetBirdForShooting();
-        spawnedBird = Instantiate(activeBird, idlePosition.position, Quaternion.identity);
-        spawnedBird.transform.right = dir;
-        birdOnSlingshot = true;
+        if (activeBird != null)
+        {
+            spawnedBird = Instantiate(activeBird, idlePosition.position, Quaternion.identity);
+            spawnedBird.transform.right = dir;
+            spawnedBird.GetComponent<Rigidbody2D>().mass *= BirdBagManager.Instance.massMultiplier;
+            spawnedBird.speedModifier *= BirdBagManager.Instance.massMultiplier;
+            birdOnSlingshot = true;
+        }
+        else
+        {
+            //Case where the bag is empty
+            StartCoroutine(startFailLevel()); //This is probably not right, just based on time
+        }
     }
 
     private void PositionAndRotateBird()

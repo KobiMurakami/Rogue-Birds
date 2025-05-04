@@ -45,10 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allPerks:
-  - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
   - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
-  - {fileID: 8997422370317896276, guid: fb9fbd958f4c9274d94801c3b8966463, type: 3}
   - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
   - {fileID: 8997422370317896276, guid: a9baa122802d12e46927ac6d4eb9ac49, type: 3}
+  - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
+  - {fileID: 8997422370317896276, guid: fb9fbd958f4c9274d94801c3b8966463, type: 3}
+  - {fileID: 8997422370317896276, guid: 292e77d3e0a797b498764c239a554487, type: 3}
   activePerks: []
   maxPerks: 30

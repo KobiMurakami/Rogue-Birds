@@ -11,15 +11,7 @@ public class HeavyWeightPerk : Perk
 
     private void EnemiesOnOnEnemyDeath(string type)
     {
-        foreach (Bird bird in BirdBagManager.Instance.birdBag)
-        {
-            bird.GetComponent<Rigidbody2D>().mass *= 1.05f;
-        }
-        
-        foreach (Bird bird in BirdBagManager.Instance.temporarilyNotInBag)
-        {
-            bird.GetComponent<Rigidbody2D>().mass *= 1.05f;
-        }
+        BirdBagManager.Instance.massMultiplier += .05f;
     }
 
     private void OnDestroy()

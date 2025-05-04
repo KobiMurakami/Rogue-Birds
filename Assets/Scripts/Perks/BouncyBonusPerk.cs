@@ -11,7 +11,7 @@ public class BouncyBonusPerk : Perk
 
     private void BouncyBirdOnOnBouncyBirdKill()
     {
-        //TODO add a reroll, ----REROLL AND SHOTS LEFT NEED TO BE MOVED OFF OF SLINGSHOT AND ON TO THE BAG 
+        BirdBagManager.Instance.maxRerolls += 1;
     }
 
     private void OnDestroy()

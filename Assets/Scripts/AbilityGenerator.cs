@@ -22,6 +22,11 @@ public class AbilityGenerator : MonoBehaviour
     
     private Bird but1Bird;
     private GameObject but2Perk;
+    
+    
+    //Events
+    public delegate void BonusChosen();
+    public static event BonusChosen OnBonusChosen;
     void Awake()
     {
         string currentScene = SceneManager.GetActiveScene().name;
@@ -57,6 +62,7 @@ public class AbilityGenerator : MonoBehaviour
     public void PressButtonOne()
     {
         BirdBagManager.Instance.AddBird(but1Bird);
+        OnBonusChosen?.Invoke();
         gameObject.SetActive(false);
     }
     
@@ -64,6 +70,7 @@ public class AbilityGenerator : MonoBehaviour
     public void PressButtonTwo()
     {
         PerkManager.Instance.ActivatePerk(but2Perk);
+        OnBonusChosen?.Invoke();
         gameObject.SetActive(false);
     }
     
@@ -78,6 +85,7 @@ public class AbilityGenerator : MonoBehaviour
         {
             PerkManager.Instance.ActivatePerk(PerkManager.Instance.GetNonDuplicateRandomPerk());
         }
+        OnBonusChosen?.Invoke();
         gameObject.SetActive(false);
     }
 }
