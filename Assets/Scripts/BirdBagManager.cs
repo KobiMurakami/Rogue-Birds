@@ -26,7 +26,6 @@ public class BirdBagManager : MonoBehaviour
         {
             Instance = this;
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 
     //Add a bird to the total bag

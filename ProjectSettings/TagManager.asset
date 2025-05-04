@@ -9,6 +9,10 @@ TagManager:
   - Bird
   - Enemy
   - Boss Buttons
+  - Slingshot
+  - AbilityGenerator
+  - PerkManager
+  - BagInitializer
   layers:
   - Default
   - TransparentFX
