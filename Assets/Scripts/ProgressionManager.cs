@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.PlayerLoop;
 
 public class ProgressionManager : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class ProgressionManager : MonoBehaviour
     public List<GameObject> selectedBirds = new List<GameObject>();
     public List<GameObject> selectedPerks = new List<GameObject>();
     public bool usingPresetLoadout = false;
+    private bool isInitializing;
+    private Scene currentScene;
+    
+    private int lastSceneHash;
 
     // Scene references
     private BagInitializer _currentBagInitializer;
@@ -38,25 +43,88 @@ public class ProgressionManager : MonoBehaviour
             Instance = this;
         
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StartCoroutine(InitializeSceneRoutine());
+        if(scene == currentScene) return;
+        currentScene = scene;
+        int currentHash = GetSceneHash(scene);
+        if(currentHash != lastSceneHash)
+        {
+            lastSceneHash = currentHash;
+            StartCoroutine(InitializeSceneRoutine());
+        }
+    }
+
+    int GetSceneHash(Scene scene)
+    {
+        return scene.buildIndex.GetHashCode() ^ scene.name.GetHashCode();
     }
     IEnumerator InitializeSceneRoutine()
     {
+        if(isInitializing) yield break;
+        isInitializing = true;
         yield return null;
-        FindSceneReferences();
-        InitializeLevel();
+        yield return null;
+        yield return null;
+        try
+        {
+            Debug.Log($"Initializing Scene: {currentScene.name}");
+            FindSceneReferences();
+            InitializeLevel();
+        }
+        finally
+        {
+            isInitializing = false;
+        }
     }
 
     void FindSceneReferences()
     {
+        _currentBagInitializer = null;
+        _currentAbilityGenerator = null;
+        _currentPerkManager = null;
+        GameObject[] rootObjects = currentScene.GetRootGameObjects();
+        foreach(GameObject root in rootObjects)
+        {
+            if(!_currentBagInitializer)
+            {
+                _currentBagInitializer = root.GetComponentInChildren<BagInitializer>(true);
+            }
+            if(!_currentPerkManager)
+            {
+                _currentPerkManager = root.GetComponentInChildren<PerkManager>(true);
+            }
+            try
+            {
+                if(!_currentAbilityGenerator)
+                {
+                    _currentAbilityGenerator = root.GetComponentInChildren<AbilityGenerator>(true);
+                }
+            } 
+            catch 
+            {
+                Debug.Log("No ability generator in scene");
+            }
+            
+        }
+        Debug.Log($"References found - BagInitializer: {_currentBagInitializer != null}," + $"Perk: {_currentPerkManager != null}," + $"Ability: {_currentAbilityGenerator}");
+        /*Debug.Log("FindSceneReferences running");
         _currentBagInitializer = GameObject.FindWithTag("BagInitializer").GetComponent<BagInitializer>();
         _currentPerkManager = GameObject.FindWithTag("PerkManager").GetComponent<PerkManager>();
-        _currentAbilityGenerator = GameObject.FindWithTag("AbilityGenerator").GetComponent<AbilityGenerator>();
+        try
+        {
+            _currentAbilityGenerator = GameObject.FindWithTag("AbilityGenerator").GetComponent<AbilityGenerator>();
+        }
+        catch
+        {
+            Debug.Log("No Ability Generator in scene");
+        }
+        */
+        
     }
 
     public void SelectLoadout(Loadout loadout)
@@ -116,5 +184,9 @@ public class ProgressionManager : MonoBehaviour
     {
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         return allLoadouts.FindAll(loadout => highScore >= loadout.requiredHighScore);
+    }
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
