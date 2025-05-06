@@ -45,7 +45,7 @@ public class AbilityGenerator : MonoBehaviour
     {
         //Get abillities
         but1Bird = BirdBagManager.Instance.GetRandomBirdType();
-        but2Perk = PerkManager.Instance.GetRandomPerk();
+        but2Perk = PerkManager.Instance.GetNonDuplicateRandomPerk();
 
         //Button 1 visuals
         button1.GetComponent<Image>().sprite = but1Bird.cardSprite;
