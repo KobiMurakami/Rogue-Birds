@@ -3462,10 +3462,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ultimate Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 8964182343215373230, guid: da79e28c159fa454ca96ca924b1d13a4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

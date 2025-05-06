@@ -16,6 +16,7 @@ public class BirdBagManager : MonoBehaviour
     public List<Bird> allBirdTypes = new List<Bird>();
     public List<Bird> birdBag = new List<Bird>();
     public List<Bird> temporarilyNotInBag = new List<Bird>();
+    public int maxBirds = 5;
     
     //Events
     public delegate void BirdAdded(Bird newBird);
@@ -31,15 +32,19 @@ public class BirdBagManager : MonoBehaviour
         {
             Instance = this;
         }
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this);
     }
 
     //Add a bird to the total bag
     public void AddBird(Bird bird)
     {
-        birdBag.Add(bird);
+
+        if(birdBag.Count < maxBirds)
+        {
+           birdBag.Add(bird);
+           OnBirdAdded?.Invoke(bird); 
+        }
         
-        OnBirdAdded?.Invoke(bird);
     }
     
     //Remove a bird from the total bag

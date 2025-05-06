@@ -1,0 +1,36 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class LoadoutButton : MonoBehaviour
+{
+    [Header("UI Elements")]
+    [SerializeField] private TMP_Text loadoutNameText;
+    [SerializeField] private TMP_Text requiredScoreText;
+    [SerializeField] private Button selectButton;
+
+    private ProgressionManager.Loadout _loadout;
+
+    public void Initialize(ProgressionManager.Loadout loadout)
+    {
+        _loadout = loadout;
+        loadoutNameText.text = loadout.loadoutName;
+        requiredScoreText.text = $"Requires: {loadout.requiredHighScore} Points";
+        
+        // Set up button interaction
+        bool unlocked = PlayerPrefs.GetInt("HighScore", 0) >= loadout.requiredHighScore;
+        selectButton.interactable = unlocked;
+        requiredScoreText.color = unlocked ? Color.green : Color.red;
+
+        // Add click handler with the stored loadout reference
+        selectButton.onClick.AddListener(OnSelectLoadout);
+    }
+
+    public void OnSelectLoadout()
+    {
+        ProgressionManager.Instance.SelectLoadout(_loadout);
+        
+        // Optional: Add visual feedback
+        selectButton.interactable = false;
+    }
+}
