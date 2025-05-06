@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf24b0e91bd932342b844ac325a8b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 3620033210121314325, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  cardSprite: {fileID: -481217337277951511, guid: 86cb98c684c292a4198e865c88f39bd3, type: 3}
   perkName: Speedy
-  perkDescription: Double the speed of all birds
+  perkDescription: Double the speed of all birds!
 --- !u!212 &4341405041077930199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92,12 +92,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3620033210121314325, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  m_Sprite: {fileID: -481217337277951511, guid: 86cb98c684c292a4198e865c88f39bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.33, y: 0.45}
+  m_Size: {x: 5.68, y: 5.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
