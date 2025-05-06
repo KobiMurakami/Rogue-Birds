@@ -54,5 +54,6 @@ MonoBehaviour:
   - {fileID: -339026737000156301, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
   - {fileID: -3387659799506037687, guid: ad0751a185f8e3845872f9d633009ed5, type: 3}
   - {fileID: -7956355084350170893, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
+  - {fileID: -5174982003904562601, guid: 80781563b4445d046b3844404839b8eb, type: 3}
   birdBag: []
   temporarilyNotInBag: []

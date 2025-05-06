@@ -51,5 +51,7 @@ MonoBehaviour:
   - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
   - {fileID: 8997422370317896276, guid: fb9fbd958f4c9274d94801c3b8966463, type: 3}
   - {fileID: 8997422370317896276, guid: 292e77d3e0a797b498764c239a554487, type: 3}
+  - {fileID: 7562870374134109849, guid: fcfa3c450cf8994449bc90aa2c016b7c, type: 3}
+  - {fileID: 7562870374134109849, guid: c6b67cfe8044572488c0e1fe533fcd67, type: 3}
   activePerks: []
   maxPerks: 30
