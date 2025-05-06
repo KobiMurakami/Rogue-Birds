@@ -44,10 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf0c6fd0f6bed14c84d8849593d2279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedMultiplier: 1
+  massMultiplier: 1
+  maxRerolls: 5
+  maxShots: 5
   allBirdTypes:
   - {fileID: 8074150365811040883, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
   - {fileID: 3190684376382082632, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
   - {fileID: -339026737000156301, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
   - {fileID: -3387659799506037687, guid: ad0751a185f8e3845872f9d633009ed5, type: 3}
+  - {fileID: -7956355084350170893, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
   birdBag: []
   temporarilyNotInBag: []

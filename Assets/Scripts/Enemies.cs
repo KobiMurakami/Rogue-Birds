@@ -32,7 +32,7 @@ public class Enemies : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         if (isDying) return;
         isDying = true;
