@@ -17,11 +17,15 @@ class BlowfishBird : Bird
         get { return _speedModifier; }
         set { _speedModifier = value; }
     }
-
+    
+    //Events
+    public delegate void BlowjayAbility(BlowfishBird bird);
+    public static event BlowjayAbility OnBlowjayAbillity;
     
     //Expand the bird and shoot out needles
     public override void ActivateAbility()
     {
+        OnBlowjayAbillity?.Invoke(this);
         gameObject.GetComponent<Animator>().SetTrigger("Expand");
         StartCoroutine(SpawnNeedles());
         StartCoroutine(ShrinkBlowfish());

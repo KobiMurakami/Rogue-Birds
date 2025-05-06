@@ -28,6 +28,10 @@ public class LevelController : MonoBehaviour
     //public GameObject Enemy();
     //public GameObject Boss();
     
+    //Level Finished Event
+    public delegate void LevelFinished();
+    public static event LevelFinished OnLevelFinished;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -117,6 +121,7 @@ public class LevelController : MonoBehaviour
 
     void WinScreen()
     {
+        OnLevelFinished?.Invoke();
         winText.SetActive(true);
 
         //Logic for going to the next stage, returning to the main menu, or replaying the current level

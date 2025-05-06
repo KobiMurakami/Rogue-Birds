@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7936198955817090223}
   - component: {fileID: 5886069319576768173}
   - component: {fileID: 3652561058888542931}
-  - component: {fileID: -339026737000156301}
-  - component: {fileID: 2437420349220769953}
+  - component: {fileID: 1902419380360706510}
+  - component: {fileID: -5174982003904562601}
   m_Layer: 0
-  m_Name: Lightning Bird 1
+  m_Name: Rogue Bird 1
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1769065797956263418, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
+  m_Sprite: {fileID: -32887390687263822, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -153,31 +153,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.61
---- !u!114 &-339026737000156301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9150330567973498683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264ff80399a77a84788e63c9a2d9bf49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardSprite: {fileID: -1769065797956263418, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
-  birdName: Thundrake
-  birdDescription: Call upon Zues to destory your opposition
-  isInMotion: 0
-  lightningBirdChannel: {fileID: 2437420349220769953}
-  lightningBirdSound: {fileID: 8300000, guid: bffcf5bd6cc7d784eb20a83d4c934840, type: 3}
-  lightningBirdVolume: 0.5
-  lightningBirdPitch: 2
-  lightning: {fileID: 6799989935912347481, guid: 726b868718940ff419156a5f6b6ae704, type: 3}
-  lightingTimeDifference: 0.2
-  _speedModifier: 1.1
---- !u!82 &2437420349220769953
+  m_Radius: 1.48
+--- !u!82 &1902419380360706510
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,7 +166,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -274,3 +251,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5174982003904562601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150330567973498683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a277c031f9d684408cc6de20a03db44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSprite: {fileID: -32887390687263822, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
+  birdName: Daggerbeak
+  birdDescription: Slice your opponents in half!
+  isInMotion: 0
+  _speedModifier: 1

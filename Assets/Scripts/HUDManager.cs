@@ -37,15 +37,15 @@ public class HUDManager : MonoBehaviour
     public Image popularPaloozaImage;
     public Image solarFlareImage;
     public Image speedyImage;
-    public Image xxx;
-    public Image yyy;
-    public Image zzz;
+    public Image shotsImage;
+    public Image birdRandoImage;
+    public Image doublePrickImage;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        shotText.text = "Shots Left: " + slingShot.shotsLeft;
-        rerollText.text = "Rerolls Left: " + slingShot.rerollsLeft;
+        shotText.text = "Shots Left: " + BirdBagManager.Instance.maxShots;
+        rerollText.text = "Rerolls Left: " + BirdBagManager.Instance.maxRerolls;
         
         SlingShot.OnShotFired += SlingShotOnOnShotFired;
         RerollButton.OnRerollPressed += RerollButtonOnOnRerollPressed;
@@ -175,10 +175,9 @@ public class HUDManager : MonoBehaviour
         IncreaseOrDecrease(popularPaloozaImage, perkNames.Contains("Popular Palooza"));
         IncreaseOrDecrease(solarFlareImage, perkNames.Contains("Solar Flare"));
         IncreaseOrDecrease(speedyImage, perkNames.Contains("Speedy"));
-        //TODO when more perks are added
-        //IncreaseOrDecrease
-        //IncreaseOrDecrease
-        //IncreaseOrDecrease
+        IncreaseOrDecrease(shotsImage, perkNames.Contains("Shots For Everyone"));
+        IncreaseOrDecrease(birdRandoImage,perkNames.Contains("Bird Randomizer"));
+        IncreaseOrDecrease(doublePrickImage, perkNames.Contains("Double Prick"));
     }
 
     //Changes the images opacity based on the bool

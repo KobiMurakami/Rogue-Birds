@@ -23,6 +23,7 @@ public abstract class Bird : MonoBehaviour
 
     protected virtual void Start()
     {
+        Debug.Log(birdName);
         rb.isKinematic = true;
         circleCollider.enabled = false;
     }
@@ -52,7 +53,7 @@ public abstract class Bird : MonoBehaviour
         rb.isKinematic = false;
         circleCollider.enabled = true;
 
-        float adjustedForce = force * speedModifier;
+        float adjustedForce = force * speedModifier * BirdBagManager.Instance.speedMultiplier;
 
         rb.AddForce(direction * adjustedForce, ForceMode2D.Impulse);
         hasBeenLaunched = true;

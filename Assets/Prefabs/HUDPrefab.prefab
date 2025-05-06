@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 917380889976104609}
   - component: {fileID: 6731354602949379839}
   m_Layer: 5
-  m_Name: XXX
+  m_Name: ShotSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -5682078726807736648, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -248,8 +248,8 @@ RectTransform:
   - {fileID: 3514908195902371518}
   - {fileID: 7791013546293831037}
   - {fileID: 4623240535783872385}
-  - {fileID: 1188055413720395415}
   - {fileID: 2512207831333835139}
+  - {fileID: 1188055413720395415}
   m_Father: {fileID: 175349457002269040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -330,7 +330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550, y: 130}
+  m_AnchoredPosition: {x: -530, y: 130}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4171813078737288423
@@ -1410,7 +1410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550, y: 190}
+  m_AnchoredPosition: {x: -530, y: 190}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4108848571650506813
@@ -1595,7 +1595,7 @@ GameObject:
   - component: {fileID: 1695320390574039086}
   - component: {fileID: 5385911128187189876}
   m_Layer: 5
-  m_Name: ZZZ
+  m_Name: PrickSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1648,7 +1648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -782659139263586076, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3306,7 +3306,7 @@ GameObject:
   - component: {fileID: 8608144067736345235}
   - component: {fileID: 8937657254828267124}
   m_Layer: 5
-  m_Name: YYY
+  m_Name: BirdRandoSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3359,7 +3359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7489283108169010207, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4071,9 +4071,9 @@ MonoBehaviour:
   popularPaloozaImage: {fileID: 1936225133167229406}
   solarFlareImage: {fileID: 8644343557697863651}
   speedyImage: {fileID: 5152063453886327285}
-  xxx: {fileID: 5385911128187189876}
-  yyy: {fileID: 8937657254828267124}
-  zzz: {fileID: 6731354602949379839}
+  shotsImage: {fileID: 6731354602949379839}
+  birdRandoImage: {fileID: 8937657254828267124}
+  doublePrickImage: {fileID: 5385911128187189876}
 --- !u!1 &9017073489674314568
 GameObject:
   m_ObjectHideFlags: 0
