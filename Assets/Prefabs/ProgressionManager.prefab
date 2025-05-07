@@ -48,15 +48,35 @@ MonoBehaviour:
   - loadoutName: Bombardiro
     requiredHighScore: 0
     birds:
-    - {fileID: 1104236815017527168, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
-    - {fileID: 1104236815017527168, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
-    - {fileID: 1104236815017527168, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
-    - {fileID: 1104236815017527168, guid: b5175646c5b6ee842a5c899fa44c4470, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
     perks:
-    - {fileID: 8997422370317896276, guid: a9baa122802d12e46927ac6d4eb9ac49, type: 3}
+    - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
     - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
+  - loadoutName: Bounce House
+    requiredHighScore: 5000
+    birds:
+    - {fileID: 9150330567973498683, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
+    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
+    - {fileID: 9150330567973498683, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
+    - {fileID: 9150330567973498683, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
+    perks:
+    - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
+    - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
+  - loadoutName: Army of Two
+    requiredHighScore: 5000
+    birds:
+    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    perks:
+    - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
+    - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
   - loadoutName: Electro
-    requiredHighScore: 0
+    requiredHighScore: 20000
     birds:
     - {fileID: 9150330567973498683, guid: 00b0d29968981a54682841a68034617a, type: 3}
     - {fileID: 9150330567973498683, guid: 00b0d29968981a54682841a68034617a, type: 3}
@@ -65,11 +85,28 @@ MonoBehaviour:
     perks:
     - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
     - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
-  allBirdPrefabs:
-  - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
-  - {fileID: 9150330567973498683, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
-  - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
-  - {fileID: 9150330567973498683, guid: ad0751a185f8e3845872f9d633009ed5, type: 3}
+  - loadoutName: Tropic Thunder
+    requiredHighScore: 15000
+    birds:
+    - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
+    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
+    - {fileID: 9150330567973498683, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
+    - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
+    perks:
+    - {fileID: 8997422370317896276, guid: a9baa122802d12e46927ac6d4eb9ac49, type: 3}
+    - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
+    - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
+  - loadoutName: BMD
+    requiredHighScore: 25000
+    birds:
+    - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
+    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
+    - {fileID: 9150330567973498683, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
+    - {fileID: 9150330567973498683, guid: ad0751a185f8e3845872f9d633009ed5, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    perks:
+    - {fileID: 8997422370317896276, guid: fb9fbd958f4c9274d94801c3b8966463, type: 3}
+    - {fileID: 8997422370317896276, guid: 292e77d3e0a797b498764c239a554487, type: 3}
   selectedBirds: []
   selectedPerks: []
   usingPresetLoadout: 0

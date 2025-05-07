@@ -32,7 +32,7 @@ public class BirdBagManager : MonoBehaviour
         {
             Instance = this;
         }
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(gameObject);
     }
 
     //Add a bird to the total bag
@@ -125,6 +125,11 @@ public class BirdBagManager : MonoBehaviour
             birdBag.Add(bird);
         }
         temporarilyNotInBag.Clear();
+    }
+
+    public void ClearBag()
+    {
+        birdBag.Clear();
     }
     
     //Returns a String list off all unique birds in the bag, -----USE THIS BEFORE REMOVING A BIRD-----

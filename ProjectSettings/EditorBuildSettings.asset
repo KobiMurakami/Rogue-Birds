@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingScreen.unity
     guid: 0d2a529326a780a48a2d3d125f203f27
+  - enabled: 1
+    path: Assets/Scenes/LoadoutSelection.unity
+    guid: d06e6045a7525694088864a0ad2db4b0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
