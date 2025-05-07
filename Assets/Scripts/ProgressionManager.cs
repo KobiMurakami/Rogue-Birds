@@ -56,7 +56,7 @@ public class ProgressionManager : MonoBehaviour
         {
             if (allLoadouts.Count == 0) break;
             int randomIndex = Random.Range(0, allLoadouts[0].birds.Count);
-            selectedBirds.Add(allLoadouts[0].birds[randomIndex]);
+            selectedBirds.Add(allLoadouts[5].birds[randomIndex]);
         }
         usingPresetLoadout = false;
     }
