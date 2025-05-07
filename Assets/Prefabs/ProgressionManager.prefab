@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5190459546842395866
 Transform:
   m_ObjectHideFlags: 0
@@ -45,16 +45,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allLoadouts:
-  - loadoutName: Bombardiro
+  - loadoutName: UnderDog
     requiredHighScore: 0
     birds:
-    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
-    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
-    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
-    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    - {fileID: 9150330567973498683, guid: ad0751a185f8e3845872f9d633009ed5, type: 3}
+    - {fileID: 9150330567973498683, guid: ad0751a185f8e3845872f9d633009ed5, type: 3}
+    - {fileID: 9150330567973498683, guid: ad0751a185f8e3845872f9d633009ed5, type: 3}
+    - {fileID: 9150330567973498683, guid: ecd91efea68d07144ae31a2c7b6c6b76, type: 3}
     perks:
     - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
     - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
+  - loadoutName: Army of Two
+    requiredHighScore: 0
+    birds:
+    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
+    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
+    perks:
+    - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
+    - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
   - loadoutName: Bounce House
     requiredHighScore: 5000
     birds:
@@ -65,23 +73,13 @@ MonoBehaviour:
     perks:
     - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
     - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
-  - loadoutName: Army of Two
-    requiredHighScore: 5000
-    birds:
-    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
-    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
-    - {fileID: 9150330567973498683, guid: 8484a356d1626c2499cd3c3434a154c1, type: 3}
-    - {fileID: 1104236815017527168, guid: 8e158cc23765c0e42aa4d975d831d268, type: 3}
-    perks:
-    - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
-    - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
   - loadoutName: Electro
     requiredHighScore: 20000
     birds:
-    - {fileID: 9150330567973498683, guid: 00b0d29968981a54682841a68034617a, type: 3}
-    - {fileID: 9150330567973498683, guid: 00b0d29968981a54682841a68034617a, type: 3}
-    - {fileID: 9150330567973498683, guid: 00b0d29968981a54682841a68034617a, type: 3}
-    - {fileID: 9150330567973498683, guid: 00b0d29968981a54682841a68034617a, type: 3}
+    - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
+    - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
+    - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
+    - {fileID: 9150330567973498683, guid: 3007cc31847211f478221b4c9a751ab6, type: 3}
     perks:
     - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
     - {fileID: 7562870374134109849, guid: 543fe5637673de74ab81c79aa091890e, type: 3}
