@@ -637,7 +637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8964182343215373230, guid: da79e28c159fa454ca96ca924b1d13a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2633,6 +2633,7 @@ MonoBehaviour:
   missilePrefab: {fileID: 6747407602239427601, guid: ccf57181908585b4eac0f1349aa8f6e4, type: 3}
   boss: {fileID: 1497811893}
   missileSpawn: {fileID: 1261898624}
+  hasFired: 0
 --- !u!1001 &1505222824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2687,7 +2688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
