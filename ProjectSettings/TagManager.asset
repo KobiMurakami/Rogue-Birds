@@ -9,6 +9,11 @@ TagManager:
   - Bird
   - Enemy
   - Boss Buttons
+  - Slingshot
+  - AbilityGenerator
+  - PerkManager
+  - BagInitializer
+  - Boss Projectile
   layers:
   - Default
   - TransparentFX

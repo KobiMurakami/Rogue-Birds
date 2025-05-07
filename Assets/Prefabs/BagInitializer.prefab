@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5370444956348499274}
   m_Layer: 0
   m_Name: BagInitializer
-  m_TagString: Untagged
+  m_TagString: BagInitializer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba718b509690100478779296838863f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdPrefabs:
-  - {fileID: -3387659799506037687, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
-  - {fileID: -3387659799506037687, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
-  - {fileID: -3387659799506037687, guid: 792b19c53dae8194bb14998d045cb8fa, type: 3}
+  birdPrefabs: []

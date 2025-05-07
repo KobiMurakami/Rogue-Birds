@@ -3,6 +3,11 @@ using UnityEngine;
 public class RerollButton : MonoBehaviour
 {
     
+    //Events 
+    public delegate void RerollPressed();
+    public static event RerollPressed OnRerollPressed;
+
+    
     private SlingShot parentScript;
 
     void Start()
@@ -28,6 +33,7 @@ public class RerollButton : MonoBehaviour
                 {
                     parentScript.RerollBird();
                     parentScript.rerollsLeft--;
+                    OnRerollPressed?.Invoke();
                 }
                 //Useless snippet
                 else
@@ -38,7 +44,7 @@ public class RerollButton : MonoBehaviour
         }
         
         //Reroll activation, IMPLEMENTED ON SPRITE SCRIPT ALREADY, THIS SHOULD BE REMOVED ONCE THE CLICK BUG IS FIXED, TEMPORARY BACK UP USING 'R' KEY
-        if (Input.GetKeyDown(KeyCode.R))
+        /*if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Reroll button clicked!");
                 
@@ -53,5 +59,6 @@ public class RerollButton : MonoBehaviour
                 Debug.Log("No rerolls left!");
             }
         }
+        */
     }
 }

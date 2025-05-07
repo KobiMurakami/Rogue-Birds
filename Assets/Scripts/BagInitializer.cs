@@ -6,12 +6,20 @@ public class BagInitializer : MonoBehaviour
     //Non-permanent startup script to initialize the bord bag with entries
     public List<Bird> birdPrefabs;
 
-    private void Start()
+    public void PopulateBirdBag()
     {
         //Generating bag
         foreach (Bird bird in birdPrefabs)
         {
             BirdBagManager.Instance.AddBird(bird);
+        }
+    }
+
+    public void SetBirdPrefabs(List<GameObject> selectedBirds)
+    {
+        foreach(GameObject birdPrefab in selectedBirds)
+        {
+            birdPrefabs.Add(birdPrefab.GetComponent<Bird>());
         }
     }
 }

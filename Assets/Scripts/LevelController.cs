@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -26,6 +27,10 @@ public class LevelController : MonoBehaviour
 
     //public GameObject Enemy();
     //public GameObject Boss();
+    
+    //Level Finished Event
+    public delegate void LevelFinished();
+    public static event LevelFinished OnLevelFinished;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -90,6 +95,17 @@ public class LevelController : MonoBehaviour
     void GoNextLevel()
     {
         BirdBagManager.Instance.ResetBag();
+        
+        StartCoroutine(LoadSceneAsync(nextLevelName));
+
+        IEnumerator LoadSceneAsync(string nextLevel)
+        {
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextLevelName);
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }
+        }
         SceneManager.LoadScene(nextLevelName);
     }
 
@@ -105,6 +121,7 @@ public class LevelController : MonoBehaviour
 
     void WinScreen()
     {
+        OnLevelFinished?.Invoke();
         winText.SetActive(true);
 
         //Logic for going to the next stage, returning to the main menu, or replaying the current level
