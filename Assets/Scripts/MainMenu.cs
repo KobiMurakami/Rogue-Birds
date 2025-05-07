@@ -70,7 +70,7 @@ public class MainMenu : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("LoadoutSelection");
     }
 
     void OpenSettings()

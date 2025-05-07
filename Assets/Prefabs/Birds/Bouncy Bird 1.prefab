@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.82, y: -5.38, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +103,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 1
   m_LinearDamping: 0.1
   m_AngularDamping: 0.1
   m_GravityScale: 0.6
@@ -153,7 +153,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 1.36
 --- !u!82 &2437420349220769953
 AudioSource:
   m_ObjectHideFlags: 0
@@ -263,6 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c0a414288367f4a96edcde767fb1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdName: Bouncy
+  cardSprite: {fileID: 5852359731530370230, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
+  birdName: Ricocrow
+  birdDescription: Work your feathers and bounce that ass
   isInMotion: 0
-  _speedModifier: 1.1
+  _speedModifier: 1.2

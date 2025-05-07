@@ -18,8 +18,14 @@ class BouncyBird : Bird
     
     public override void ActivateAbility()
     {
-        
-        //specific ability logic
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;             // Remove all momentum
+            rb.angularVelocity = 0f;                // Stop any rotation
+            rb.gravityScale = 1f;                   // Ensure gravity is on
+            rb.isKinematic = false;                 // Just in case it was kinematic
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

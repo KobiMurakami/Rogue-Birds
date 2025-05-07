@@ -28,7 +28,6 @@ public class PerkManager : MonoBehaviour
         {
             Instance = this;
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     //Instantiates the perk game object and adds it to the active list
