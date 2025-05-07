@@ -1807,6 +1807,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1261898625}
+  - component: {fileID: 1261898627}
+  - component: {fileID: 1261898626}
   m_Layer: 0
   m_Name: MissileSpawn
   m_TagString: Untagged
@@ -1829,6 +1831,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1497811896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1261898626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261898624}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa83668bf1152044bac55297dc465389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 6747407602239427601, guid: ccf57181908585b4eac0f1349aa8f6e4, type: 3}
+  missileSpawn: {fileID: 1261898624}
+  hasFired: 0
+--- !u!114 &1261898627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261898624}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4106f0382690b794b9c8120566061bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HomingProjectileRB: {fileID: 8687744234380549024, guid: ccf57181908585b4eac0f1349aa8f6e4, type: 3}
+  speed: 9000
+  rotationSpeed: 9000
 --- !u!1001 &1307461078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2526,8 +2558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missilePrefab: {fileID: 6747407602239427601, guid: ccf57181908585b4eac0f1349aa8f6e4, type: 3}
-  boss: {fileID: 1497811893}
   missileSpawn: {fileID: 1261898624}
+  hasFired: 0
 --- !u!1001 &1505222824
 PrefabInstance:
   m_ObjectHideFlags: 0
