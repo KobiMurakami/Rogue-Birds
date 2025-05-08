@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DoublePrickPerk_0: 5067404133869776522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
