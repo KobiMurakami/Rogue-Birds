@@ -9,11 +9,11 @@ public class LoadoutButton : MonoBehaviour
     [SerializeField] private TMP_Text requiredScoreText;
     [SerializeField] private Button selectButton;
 
-    private ProgressionManager.Loadout _loadout;
+    private int _loadoutIndex;
 
-    public void Initialize(ProgressionManager.Loadout loadout)
+    public void Initialize(ProgressionManager.Loadout loadout, int index)
     {
-        _loadout = loadout;
+        _loadoutIndex = index;
         loadoutNameText.text = loadout.loadoutName;
         requiredScoreText.text = $"Requires: {loadout.requiredHighScore} Points";
         
@@ -28,7 +28,7 @@ public class LoadoutButton : MonoBehaviour
 
     public void OnSelectLoadout()
     {
-        ProgressionManager.Instance.SelectLoadout(_loadout);
+        ProgressionManager.Instance.SelectLoadout(_loadoutIndex);
         
         // Optional: Add visual feedback
         selectButton.interactable = false;

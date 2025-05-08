@@ -3,7 +3,7 @@ using UnityEngine;
 class VanillaBird : Bird
 {
     public AudioClip captainPlainClip;
-    public AudioSource vanillaAudioSource;
+    public float captainPlainVolume;
     //Weird ass Necessary Inheritance stuff
     [SerializeField] private float _speedModifier = 1.0f;
     public override float speedModifier
@@ -15,6 +15,8 @@ class VanillaBird : Bird
     
     public override void ActivateAbility()
     {
-        vanillaAudioSource.PlayOneShot(captainPlainClip);
+        birdAudioSource.pitch = 1f;
+        birdAudioSource.PlayOneShot(captainPlainClip, captainPlainVolume);
+        //TODO add some score
     }
 }

@@ -1,51 +1,48 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadoutUIController : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private Transform loadoutButtonContainer;
-    [SerializeField] private GameObject loadoutButtonPrefab;
+    [SerializeField] private LoadoutButton[] loadoutButtons; // Assign these in inspector
     [SerializeField] private Button startButton;
 
     void Start()
     {
+        InitializeLoadoutButtons();
         startButton.onClick.AddListener(OnStartClicked);
-        RefreshLoadoutButtons();
     }
 
-    void RefreshLoadoutButtons()
+    void InitializeLoadoutButtons()
     {
-        // Clear existing buttons
-        foreach (Transform child in loadoutButtonContainer)
-            Destroy(child.gameObject);
-
-        // Create buttons for unlocked loadouts
-        List<ProgressionManager.Loadout> unlockedLoadouts = 
-            ProgressionManager.Instance.GetUnlockedLoadouts();
-
-        foreach (ProgressionManager.Loadout loadout in unlockedLoadouts)
+        // Ensure we don't exceed available buttons or loadouts
+        int buttonCount = Mathf.Min(loadoutButtons.Length, ProgressionManager.Instance.allLoadouts.Count);
+        
+        for (int i = 0; i < buttonCount; i++)
         {
-            CreateLoadoutButton(loadout);
+            var loadout = ProgressionManager.Instance.allLoadouts[i];
+            loadoutButtons[i].gameObject.SetActive(true);
+            loadoutButtons[i].Initialize(loadout, i);
+        }
+
+        // Disable unused buttons
+        for (int i = buttonCount; i < loadoutButtons.Length; i++)
+        {
+            loadoutButtons[i].gameObject.SetActive(false);
         }
     }
 
-    void CreateLoadoutButton(ProgressionManager.Loadout loadout)
+    void OnStartClicked()
     {
-        GameObject buttonObj = Instantiate(loadoutButtonPrefab, loadoutButtonContainer);
-        LoadoutButton button = buttonObj.GetComponent<LoadoutButton>();
-        button.Initialize(loadout);
-    
-    }
-
-    public void OnStartClicked()
-    {
-        if (!ProgressionManager.Instance.usingPresetLoadout)
-        {
-            ProgressionManager.Instance.CreateRandomLoadout();
-        }
+        StartCoroutine(loadoutCoroutine());
         SceneManager.LoadScene("Level1");
+    }
+
+    IEnumerator loadoutCoroutine()
+    {
+        ProgressionManager.Instance.ApplyLoadout();
+        yield return new WaitForSecondsRealtime(1);
     }
 }

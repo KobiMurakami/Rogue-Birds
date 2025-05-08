@@ -267,4 +267,10 @@ MonoBehaviour:
   birdName: Daggerbeak
   birdDescription: Slice your opponents in half!
   isInMotion: 0
+  birdAudioSource: {fileID: 1902419380360706510}
+  launchSound: {fileID: 8300000, guid: dfd929c42ca50f144904e30e159ee9dc, type: 3}
+  launchSoundVolume: 1
+  launchSoundPitch: 1
   _speedModifier: 1
+  rogueAbilitySound: {fileID: 8300000, guid: f106b2941d02a47438f2155300eb3937, type: 3}
+  rogueAbilityVolume: 1

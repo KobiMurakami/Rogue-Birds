@@ -34,9 +34,8 @@ class LightningBird : Bird
     {
         //Sounds
         lightningBirdChannel.clip = lightningBirdSound;
-        lightningBirdChannel.volume = lightningBirdVolume;
         lightningBirdChannel.pitch = lightningBirdPitch;
-        lightningBirdChannel.Play();
+        lightningBirdChannel.PlayOneShot(lightningBirdSound, lightningBirdVolume);
         
         StartCoroutine(SpawnLightning(0));
         StartCoroutine(SpawnLightning(lightingTimeDifference));
