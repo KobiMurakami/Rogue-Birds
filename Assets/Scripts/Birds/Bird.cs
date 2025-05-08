@@ -32,6 +32,8 @@ public abstract class Bird : MonoBehaviour
         Debug.Log(birdName);
         rb.isKinematic = true;
         circleCollider.enabled = false;
+        
+        
     }
 
     private void Update()
@@ -73,6 +75,11 @@ public abstract class Bird : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         shouldFaceVelocityDirection = false;
+
+        if (collision.gameObject.CompareTag("Boss Projectile"))
+        {
+            BossBehavior.boss.gameObject.GetComponent<BossBehavior>().hasFired = false;
+        }
     }
 
     public abstract void ActivateAbility();
