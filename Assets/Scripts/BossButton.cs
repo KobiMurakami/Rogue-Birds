@@ -39,7 +39,7 @@ public class BossButton : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Bird"))
+        if(collision.gameObject.CompareTag("Bird") || collision.gameObject.CompareTag("Lightning") || collision.gameObject.CompareTag("Needle"))
         {
             if (gameObject == button1)
             {
