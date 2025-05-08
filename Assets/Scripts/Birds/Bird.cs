@@ -7,6 +7,12 @@ public abstract class Bird : MonoBehaviour
     public string birdDescription;
     public abstract float speedModifier { get; set; }
     public float isInMotion;
+    
+    [Header("Audio")]
+    public AudioSource birdAudioSource;
+    public AudioClip launchSound;
+    public float launchSoundVolume;
+    public float launchSoundPitch;
 
     protected Rigidbody2D rb;
     private CircleCollider2D circleCollider;
@@ -52,6 +58,10 @@ public abstract class Bird : MonoBehaviour
 
     public void LaunchBird(Vector2 direction, float force)
     {
+        birdAudioSource.clip = launchSound;
+        birdAudioSource.pitch = launchSoundPitch;
+        birdAudioSource.PlayOneShot(launchSound, launchSoundVolume);
+        
         rb.isKinematic = false;
         circleCollider.enabled = true;
 

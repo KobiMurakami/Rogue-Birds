@@ -232,6 +232,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &103965860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -273,6 +275,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &131546111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,6 +390,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &208507117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -427,6 +433,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!4 &222695471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1278110902282688965, guid: 2fd55bb5f139b9441940351eb5b8e939, type: 3}
@@ -676,6 +684,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &367082033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -789,6 +799,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &435147392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -830,6 +842,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &437951589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +957,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &490764500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1056,6 +1072,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &562472836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1417,6 +1435,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &844753151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1607,6 +1627,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &929712781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -1648,6 +1670,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &953175231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2245,6 +2269,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!4 &1260718312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8057197675664197, guid: f56fca09055b27a409f33cb7501fc8c2, type: 3}
@@ -2291,6 +2317,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &1293331007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -2332,6 +2360,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1309722477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2578,6 +2608,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &1344525460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -2619,6 +2651,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &1399770405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -2660,6 +2694,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!4 &1409517586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1613834464162373024, guid: 6237baa371fe0c846ba4b53951afd5a3, type: 3}
@@ -2706,6 +2742,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &1429862515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -2747,6 +2785,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1436297629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2850,6 +2890,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1480571350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3340,6 +3382,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1759270315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3458,6 +3502,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1801168472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3509,10 +3555,6 @@ PrefabInstance:
     - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: m_Name
       value: NewSlingShot (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3907,6 +3949,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!4 &1959217850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4499431856791247795, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -4288,6 +4332,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &2095885858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -4329,6 +4375,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &2112295427 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489617042099371348, guid: 0ef765f2bebb5fa449b6354bb769e060, type: 3}
@@ -4370,6 +4418,8 @@ MonoBehaviour:
   damageThreshold: 0.5
   blockType: 1
   breakEffect: {fileID: 5658126352995408865, guid: c17a0e864d3c4a147ad2df42865de3a0, type: 3}
+  breakSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &2125782488
 PrefabInstance:
   m_ObjectHideFlags: 0

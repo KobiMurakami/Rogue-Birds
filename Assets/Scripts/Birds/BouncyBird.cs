@@ -5,6 +5,11 @@ class BouncyBird : Bird
     
     //Weird ass Necessary Inheritance stuff
     [SerializeField] private float _speedModifier = 1.0f;
+    public AudioClip bounceAbilitySound;
+    public float bounceAbilityVolume = 1;
+    public AudioClip bounceSound;
+    public float bounceVolume = 1;
+    public int maxBounceNoises;
     
     //Events
     public delegate void BouncyBirdKill();
@@ -18,6 +23,11 @@ class BouncyBird : Bird
     
     public override void ActivateAbility()
     {
+        birdAudioSource.clip = bounceAbilitySound;
+        birdAudioSource.volume = bounceAbilityVolume;
+        birdAudioSource.pitch = 1f;
+        birdAudioSource.Play();
+        
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -30,6 +40,14 @@ class BouncyBird : Bird
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (maxBounceNoises > 0)
+        {
+            birdAudioSource.clip = bounceSound;
+            birdAudioSource.pitch = 1f;
+            birdAudioSource.PlayOneShot(bounceSound, bounceVolume);
+            maxBounceNoises--;
+        }
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
