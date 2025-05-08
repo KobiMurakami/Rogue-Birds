@@ -5,6 +5,11 @@ public class MusicManager : MonoBehaviour
     public AudioSource abilityMusic;
     public AudioSource battleMusic;
     public GameObject abilityScreen;
+    public GameObject loseScreen;
+
+    public bool wasActiveLastFrame;
+    public bool failedLastFrame;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,7 +21,17 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (wasActiveLastFrame && !abilityScreen.activeSelf)
+        {
+            BattleMusicStart();
+        }
+        wasActiveLastFrame = abilityScreen.activeSelf;
+
+        if (failedLastFrame && loseScreen.activeSelf)
+        {
+            battleMusic.Stop();
+        }
+        failedLastFrame = loseScreen.activeSelf;
     }
 
     void CheckAbilityScreen()
