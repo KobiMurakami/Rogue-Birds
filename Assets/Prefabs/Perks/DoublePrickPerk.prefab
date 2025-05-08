@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -782659139263586076, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  m_Sprite: {fileID: 5067404133869776522, guid: ed07caf1d720e5749b53899ed0fdb80e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3525785d99f5830408c14578376663d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: -782659139263586076, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  cardSprite: {fileID: 5067404133869776522, guid: ed07caf1d720e5749b53899ed0fdb80e, type: 3}
   perkName: Double Prick
   perkDescription: Blowjay has twice the amount of needles!
