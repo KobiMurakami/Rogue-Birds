@@ -3434,6 +3434,7 @@ MonoBehaviour:
   currentLevelNumber: 2
   scoreManager: {fileID: 1449088347}
   loseCondition: 0
+  calledOnce: 0
   winText: {fileID: 678425796}
   loseText: {fileID: 820995369}
   nextLevelButton: {fileID: 678425794}
@@ -3471,6 +3472,7 @@ MonoBehaviour:
   numEnemiesInLevel: 4
   numEnemiesKilled: 0
   score: 0
+  initializedScore: 0
   ScoreNumberText: {fileID: 291283977}
 --- !u!4 &1480422291 stripped
 Transform:
@@ -5184,7 +5186,6 @@ SceneRoots:
   - {fileID: 1542922573}
   - {fileID: 1643196612}
   - {fileID: 228430313}
-  - {fileID: 2120830182}
   - {fileID: 1539923075}
   - {fileID: 406773204}
   - {fileID: 2001835818}
