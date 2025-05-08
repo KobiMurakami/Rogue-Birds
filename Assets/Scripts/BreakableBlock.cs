@@ -44,23 +44,14 @@ public class BreakableBlock : MonoBehaviour
         {
             switch (blockType)
             {
-                case BlockType.Glass:
-                    rb.mass = 1f;
-                    rb.linearDamping = 0.5f;
-                    rb.angularDamping = 0.5f;
-                    break;
-                case BlockType.Wood:
-                    rb.mass = 2f;
-                    rb.linearDamping = 0.7f;
-                    rb.angularDamping = 0.7f;
-                    break;
+                
                 case BlockType.Stone:
                     rb.mass = 5f;
                     rb.linearDamping = 1f;
                     rb.angularDamping = 1f;
                     break;
                 case BlockType.Steel:
-                    rb.mass = 20f; // much heavier
+                    rb.mass = 20f;
                     rb.linearDamping = 2f;
                     rb.angularDamping = 2f;
                     break;
