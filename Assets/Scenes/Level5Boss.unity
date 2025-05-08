@@ -1239,17 +1239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &579260615 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2436895132746832484, guid: 15560e8603dff364f88dbbaa6b643fc8, type: 3}
-  m_PrefabInstance: {fileID: 579260611}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &579260616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9063261071411268513, guid: 15560e8603dff364f88dbbaa6b643fc8, type: 3}
@@ -1854,7 +1843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1cfbf109d9f240abc504b1613f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: EndingScreen
+  nextLevelName: Level1-Hard
   levelName: Level5Boss
   currentLevelNumber: 7
   scoreManager: {fileID: 749355520}
@@ -1862,8 +1851,8 @@ MonoBehaviour:
   winText: {fileID: 579260616}
   loseText: {fileID: 1996217547}
   nextLevelButton: {fileID: 579260614}
-  replayButtonWin: {fileID: 579260615}
-  replayButtonLose: {fileID: 1996217545}
+  replayButtonWin: {fileID: 0}
+  replayButtonLose: {fileID: 0}
   menuButtonWin: {fileID: 579260613}
   menuButtonLose: {fileID: 1996217546}
 --- !u!4 &749355519
@@ -3451,6 +3440,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+      propertyPath: shootsound
+      value: 
+      objectReference: {fileID: 8300000, guid: 677f356ed8b50ca4fa462b5875c98b30, type: 3}
     - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: m_Name
       value: NewSlingShot
@@ -3464,6 +3457,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+--- !u!114 &1505222825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+  m_PrefabInstance: {fileID: 1505222824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a224d9315803e2348803396ce114d1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1619574958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3882,6 +3886,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8451644738327208318, guid: 9e1d76c6fcb5b074782f474c801430e0, type: 3}
+      propertyPath: slingShot
+      value: 
+      objectReference: {fileID: 1505222825}
     - target: {fileID: 8935372996321309482, guid: 9e1d76c6fcb5b074782f474c801430e0, type: 3}
       propertyPath: m_Name
       value: HUDPrefab
@@ -4370,17 +4378,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6741246068347260720, guid: 3fa59180694111f488737d76cae2d142, type: 3}
   m_PrefabInstance: {fileID: 1996217543}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1996217545 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1216284640781564549, guid: 3fa59180694111f488737d76cae2d142, type: 3}
-  m_PrefabInstance: {fileID: 1996217543}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1996217546 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2540852241687200823, guid: 3fa59180694111f488737d76cae2d142, type: 3}
