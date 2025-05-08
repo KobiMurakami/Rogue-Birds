@@ -35,5 +35,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadoutSelection.unity
     guid: d06e6045a7525694088864a0ad2db4b0
+  - enabled: 1
+    path: Assets/Scenes/Level4-Hard.unity
+    guid: 698ccfff2aef6f34e995d465ddc291e0
+  - enabled: 1
+    path: Assets/Scenes/Level3-Hard.unity
+    guid: 5754ef9fe6e91444ca8dbcdd426193d0
+  - enabled: 1
+    path: Assets/Scenes/Level2-Hard.unity
+    guid: f43af76fa584b4640b593e755d81d60d
+  - enabled: 1
+    path: Assets/Scenes/Level1-Hard.unity
+    guid: 93012008318c6fe40ad83a6b74a9f579
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

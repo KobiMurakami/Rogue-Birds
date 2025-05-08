@@ -753,6 +753,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+--- !u!114 &724373638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+  m_PrefabInstance: {fileID: 724373637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a224d9315803e2348803396ce114d1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &769096006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2747,6 +2758,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8451644738327208318, guid: 9e1d76c6fcb5b074782f474c801430e0, type: 3}
+      propertyPath: slingShot
+      value: 
+      objectReference: {fileID: 724373638}
     - target: {fileID: 8935372996321309482, guid: 9e1d76c6fcb5b074782f474c801430e0, type: 3}
       propertyPath: m_Name
       value: HUDPrefab

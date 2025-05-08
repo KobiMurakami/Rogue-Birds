@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Perk : MonoBehaviour
 {
@@ -10,5 +11,13 @@ public class Perk : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this);
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
     }
 }
