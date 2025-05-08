@@ -52,7 +52,7 @@ class BouncyBird : Bird
         {
             Destroy(collision.gameObject);
             OnBouncyBirdKill?.Invoke();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
     
