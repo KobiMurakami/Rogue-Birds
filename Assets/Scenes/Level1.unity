@@ -1354,20 +1354,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
-      propertyPath: shootsound
-      value: 
-      objectReference: {fileID: 8300000, guid: 677f356ed8b50ca4fa462b5875c98b30, type: 3}
-    - target: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 273826765}
     - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
       propertyPath: m_Name
       value: NewSlingShot
-      objectReference: {fileID: 0}
-    - target: {fileID: 3572438914403634829, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
