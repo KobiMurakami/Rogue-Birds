@@ -73,12 +73,25 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("LoadoutSelection");
     }
 
-    void OpenSettings()
+  void OpenSettings()
+{
+    mainMenuPanel.SetActive(false);
+    creditsPanel.SetActive(false);
+    settingsPanel.SetActive(true);
+  
+    if (AudioManager.Instance != null)
     {
-        mainMenuPanel.SetActive(false);
-        creditsPanel.SetActive(false);
-        settingsPanel.SetActive(true);
+        if (musicVolumeSlider != null && AudioManager.Instance.GetMusicVolume() >= 0)
+        {
+            musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+        }
+        
+        if (fxVolumeSlider != null && AudioManager.Instance.GetFXVolume() >= 0)
+        {
+            fxVolumeSlider.value = AudioManager.Instance.GetFXVolume();
+        }
     }
+}
 
     void OpenCredits()
     {
@@ -118,22 +131,19 @@ public class MainMenu : MonoBehaviour
         mainMenuPanel.SetActive(true);
     }
 
-    private void ApplySettings()
+   private void ApplySettings()
+{
+    if (AudioManager.Instance != null)
     {
-        if (AudioManager.Instance != null)
+        if(musicVolumeSlider != null)
         {
-            if(musicVolumeSlider != null)
-            {
-                AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
-            }
+            AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
         }
-
-        if (AudioManager.Instance != null)
+        
+        if(fxVolumeSlider != null)
         {
-            if(fxVolumeSlider != null)
-            {
-                AudioManager.Instance.SetMusicVolume(fxVolumeSlider.value);
-            }
+            AudioManager.Instance.SetFXVolume(fxVolumeSlider.value); 
         }
     }
+}
 }
