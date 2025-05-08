@@ -153,7 +153,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 1.61
 --- !u!114 &-339026737000156301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,9 +170,13 @@ MonoBehaviour:
   birdName: Thundrake
   birdDescription: Call upon Zues to destory your opposition
   isInMotion: 0
+  birdAudioSource: {fileID: 2437420349220769953}
+  launchSound: {fileID: 8300000, guid: 42bbb6e0e56c066469fdf70f7990b5cc, type: 3}
+  launchSoundVolume: 4
+  launchSoundPitch: 1
   lightningBirdChannel: {fileID: 2437420349220769953}
   lightningBirdSound: {fileID: 8300000, guid: bffcf5bd6cc7d784eb20a83d4c934840, type: 3}
-  lightningBirdVolume: 0.5
+  lightningBirdVolume: 0.8
   lightningBirdPitch: 2
   lightning: {fileID: 6799989935912347481, guid: 726b868718940ff419156a5f6b6ae704, type: 3}
   lightingTimeDifference: 0.2

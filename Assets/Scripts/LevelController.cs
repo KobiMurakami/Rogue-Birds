@@ -28,6 +28,10 @@ public class LevelController : MonoBehaviour
     //public GameObject Enemy();
     //public GameObject Boss();
     
+    //Level Finished Event
+    public delegate void LevelFinished();
+    public static event LevelFinished OnLevelFinished;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -88,7 +92,7 @@ public class LevelController : MonoBehaviour
         
     }
 
-    void GoNextLevel()
+    public void GoNextLevel()
     {
         BirdBagManager.Instance.ResetBag();
         
@@ -105,28 +109,33 @@ public class LevelController : MonoBehaviour
         SceneManager.LoadScene(nextLevelName);
     }
 
-    void ReloadLevel()
+    public void ReloadLevel()
     {
         SceneManager.LoadScene(levelName);
     }
 
-    void GoToMenu()
+    public void GoToMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void testNextButtons() {
+        Debug.Log("Next level button pushed");
+    }
+
     void WinScreen()
     {
+        OnLevelFinished?.Invoke();
         winText.SetActive(true);
 
         //Logic for going to the next stage, returning to the main menu, or replaying the current level
         //TODO: Fix problem where it just instantly reloads regardless of input
-        nextLevelButton.onClick.AddListener(GoNextLevel);
+        // nextLevelButton.onClick.AddListener(testNextButtons);
 
-        replayButtonWin.onClick.AddListener(ReloadLevel);
+        // replayButtonWin.onClick.AddListener(testNextButtons);
         
-        //Menu
-        menuButtonWin.onClick.AddListener(GoToMenu);
+        // //Menu
+        // menuButtonWin.onClick.AddListener(testNextButtons);
     }
     
     void LoseScreen()
@@ -134,8 +143,8 @@ public class LevelController : MonoBehaviour
         Debug.Log("Lose Screen Activated");
         loseText.SetActive(true);
 
-        replayButtonLose.onClick.AddListener(ReloadLevel);
-        menuButtonLose.onClick.AddListener(GoToMenu);
+        // replayButtonLose.onClick.AddListener(ReloadLevel);
+        // menuButtonLose.onClick.AddListener(GoToMenu);
 
     }
 

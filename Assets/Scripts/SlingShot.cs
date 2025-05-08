@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
-using UnityEngine.InputSystem.Android.LowLevel;
+// using UnityEngine.InputSystem.Android.LowLevel;
 using UnityEngine.InputSystem.LowLevel;
 public class SlingShot : MonoBehaviour
 {
@@ -32,6 +32,9 @@ public class SlingShot : MonoBehaviour
     
     [Header("Rogue-like settings")]
     public Bird activeBird;
+    
+    [Header("Audio")]
+    [SerializeField] private AudioClip shootsound;
 
 
 
@@ -45,6 +48,8 @@ public class SlingShot : MonoBehaviour
     public Boolean failSignalSent = false;
 
     public GameObject levelManager;
+
+    private AudioSource audioSource;
     
     
     //Events
@@ -60,6 +65,7 @@ public class SlingShot : MonoBehaviour
         SpawnBird();
         rerollsLeft = BirdBagManager.Instance.maxRerolls;
         shotsLeft = BirdBagManager.Instance.maxShots;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -83,6 +89,10 @@ public class SlingShot : MonoBehaviour
             {
                 clickedWithinArea = false;
                 spawnedBird.LaunchBird(direction, shotForce);
+                if (shootsound != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(shootsound);
+                }
                 birdOnSlingshot = false;
                 shotsLeft--;
                 OnShotFired?.Invoke();
