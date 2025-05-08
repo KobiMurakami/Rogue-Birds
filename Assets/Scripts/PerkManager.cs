@@ -61,6 +61,17 @@ public class PerkManager : MonoBehaviour
         Destroy(perk);
         OnPerkDeactivated?.Invoke(perk);
     }
+
+    public void DeactivateAllPerks()
+    {
+        foreach(GameObject perk in allPerks)
+        {
+            if(activePerks.Contains(perk))
+            {
+                DeactivatePerk(perk);
+            }
+        }
+    }
     
 
     //Gets a random perks game object from total perks
