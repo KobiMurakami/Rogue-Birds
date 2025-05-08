@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5190459546842395866
 Transform:
   m_ObjectHideFlags: 0
@@ -63,6 +63,7 @@ MonoBehaviour:
     perks:
     - {fileID: 8997422370317896276, guid: 0119684d97318bb4190e634105c08e8c, type: 3}
     - {fileID: 8997422370317896276, guid: ca98afefb70dbed4f9465df1850a0946, type: 3}
+    - {fileID: 142538425807421097, guid: c0709eacaf8bd2f48a71077b194a9bb4, type: 3}
   - loadoutName: Bounce House
     requiredHighScore: 5000
     birds:

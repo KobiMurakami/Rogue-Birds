@@ -18,7 +18,7 @@ public class LoadoutButton : MonoBehaviour
         requiredScoreText.text = $"Requires: {loadout.requiredHighScore} Points";
         
         // Set up button interaction
-        bool unlocked = PlayerPrefs.GetInt("HighScore", 0) >= loadout.requiredHighScore;
+        bool unlocked = PlayerPrefs.GetInt("cumscore", 0) >= loadout.requiredHighScore;
         selectButton.interactable = unlocked;
         requiredScoreText.color = unlocked ? Color.green : Color.red;
 

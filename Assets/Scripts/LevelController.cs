@@ -13,6 +13,7 @@ public class LevelController : MonoBehaviour
 
     public Scoring scoreManager;
     public bool loseCondition = false;
+    public bool calledOnce = false;
     
     //Win and Lose screens for the game 
     public GameObject winText;
@@ -52,11 +53,15 @@ public class LevelController : MonoBehaviour
 
         if (enemies == null)
         {
-            PlayerPrefs.SetInt("currentScore", scoreManager.GetComponent<Scoring>().score);
+            Debug.Log("Win Condition Triggered");
+            int currentScore = scoreManager.GetComponent<Scoring>().score;
+            PlayerPrefs.SetInt("currentscore", currentScore);
+            Debug.Log("Sending Updated Score to next level");
             WinScreen();
         }
 
-        if(loseCondition) {
+        if(loseCondition && !calledOnce) {
+            calledOnce = true;
             Debug.Log("Lose Condition Triggered");
 
             int highScore = PlayerPrefs.GetInt("highscore", 0);
@@ -68,26 +73,31 @@ public class LevelController : MonoBehaviour
                 PlayerPrefs.SetInt("highestlevel", currentLevelNumber);
             }
 
+            int cumScore = PlayerPrefs.GetInt("cumscore", 0);
+            PlayerPrefs.SetInt("cumscore", (cumScore + currentScore));
+            Debug.Log("Game Lost, Setting current score to 0");
+            PlayerPrefs.SetInt("currentscore", 0);
+
             LoseScreen();
         }
 
         // Debug code for testing win and loss screens
-        if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
-        {
-            winText.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.W))
-            {
-                GoNextLevel();
-            }
-        }
-        if(loseCondition)
-        {
-            loseText.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                ReloadLevel();
-            }
-        }
+        // if (scoreManager.numEnemiesInLevel == scoreManager.numEnemiesKilled)
+        // {
+        //     winText.SetActive(true);
+        //     if(Input.GetKeyDown(KeyCode.W))
+        //     {
+        //         GoNextLevel();
+        //     }
+        // }
+        // if(loseCondition)
+        // {
+        //     loseText.SetActive(true);
+        //     if(Input.GetKeyDown(KeyCode.R))
+        //     {
+        //         ReloadLevel();
+        //     }
+        // }
         
         
     }

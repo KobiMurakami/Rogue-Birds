@@ -38,6 +38,26 @@ public class BreakableBlock : MonoBehaviour
         }
 
         _currentHealth = maxHealth;
+        
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            switch (blockType)
+            {
+                
+                case BlockType.Stone:
+                    rb.mass = 5f;
+                    rb.linearDamping = 1f;
+                    rb.angularDamping = 1f;
+                    break;
+                case BlockType.Steel:
+                    rb.mass = 20f;
+                    rb.linearDamping = 0.05f;
+                    rb.angularDamping = 0.05f;
+                    break;
+            }
+        }
+
     }
 
     public void DamageBlock(float damageAmount)

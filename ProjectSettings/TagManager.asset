@@ -15,6 +15,8 @@ TagManager:
   - BagInitializer
   - Boss Projectile
   - LoadoutButton
+  - Lightning
+  - Needle
   layers:
   - Default
   - TransparentFX

@@ -23,23 +23,27 @@ public class BossBehavior : MonoBehaviour
     }
     void Update()
     {
-        float birdHeight = GameObject.FindGameObjectWithTag("Bird").transform.position.y;
-
-        if (birdHeight > 5 && !hasFired)
+        GameObject bird = GameObject.FindWithTag("Bird");
+        if (bird != null)
         {
-            FireMissile();
-            hasFired = true; // Prevent firing again
-        }
+            float birdHeight = bird.transform.position.y;
+            if (birdHeight > 5 && !hasFired)
+            {
+                FireMissile();
+                hasFired = true; // Prevent firing again
+            }
 
-        //Reset if bird drops below threshold again
-        if (birdHeight <= 5)
-        {
-            hasFired = false;
+            //Reset if bird drops below threshold again
+            if (birdHeight <= 5)
+            {
+                hasFired = false;
+            }
         }
     }
 
     private void FireMissile()
     {
+        Debug.Log("Fire missile");
         Instantiate(missilePrefab, missileSpawn.transform.position, missileSpawn.transform.rotation);
         
     }
