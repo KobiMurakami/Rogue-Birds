@@ -3435,9 +3435,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelName: Level3-Hard
   levelName: Level2-Hard
-  currentLevelNumber: 2
+  currentLevelNumber: 8
   scoreManager: {fileID: 1449088347}
   loseCondition: 0
+  calledOnce: 0
   winText: {fileID: 678425796}
   loseText: {fileID: 820995369}
   nextLevelButton: {fileID: 678425794}
@@ -3475,6 +3476,7 @@ MonoBehaviour:
   numEnemiesInLevel: 5
   numEnemiesKilled: 0
   score: 0
+  initializedScore: 0
   ScoreNumberText: {fileID: 291283977}
 --- !u!4 &1480422291 stripped
 Transform:

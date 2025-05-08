@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -1769065797956263418, guid: 3be22e44b74f0e440956fcd849252fa8, type: 3}
   birdName: Thundrake
-  birdDescription: Call upon Zues to destory your opposition
+  birdDescription: Call upon Zeus to destroy your opposition
   isInMotion: 0
   birdAudioSource: {fileID: 2437420349220769953}
   launchSound: {fileID: 8300000, guid: 42bbb6e0e56c066469fdf70f7990b5cc, type: 3}

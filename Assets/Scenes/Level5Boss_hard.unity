@@ -1843,9 +1843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1cfbf109d9f240abc504b1613f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Level1-Hard
-  levelName: Level5Boss
-  currentLevelNumber: 6
+  nextLevelName: EndingScreen
+  levelName: Level5Boss_hard
+  currentLevelNumber: 11
   scoreManager: {fileID: 749355520}
   loseCondition: 0
   calledOnce: 0

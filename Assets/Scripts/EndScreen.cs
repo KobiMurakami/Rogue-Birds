@@ -4,26 +4,22 @@ using UnityEngine.UI;
 
 public class EndScreen : MonoBehaviour
 {
-    public Button restartRunButton;
     public Button menuButton;
 
     // Update is called once per frame
     void Start()
     {
-        //Restart Run
-        restartRunButton.onClick.AddListener(BackToStart);
-        
-        //Menu
-        menuButton.onClick.AddListener(GoToMenu);
+        int score = PlayerPrefs.GetInt("currentscore", 0);
+        if(score >= PlayerPrefs.GetInt("highscore", 0)) {
+            PlayerPrefs.SetInt("highscore", score);
+        }
+        PlayerPrefs.SetInt("currentscore", 0);
+        int cumulativeScore = PlayerPrefs.GetInt("cumscore", 0);
+        PlayerPrefs.SetInt("cumscore", cumulativeScore + score);
     }
     
-    void GoToMenu()
+    public void GoToMenu()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-
-    void BackToStart()
-    {
-        SceneManager.LoadScene("Level1");
     }
 }

@@ -5080,11 +5080,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1cfbf109d9f240abc504b1613f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Level5Boss
+  nextLevelName: Level5Boss_hard
   levelName: Level4-Hard
-  currentLevelNumber: 4
+  currentLevelNumber: 10
   scoreManager: {fileID: 1928151927}
   loseCondition: 0
+  calledOnce: 0
   winText: {fileID: 1321942516}
   loseText: {fileID: 618750208}
   nextLevelButton: {fileID: 1321942514}
@@ -5122,6 +5123,7 @@ MonoBehaviour:
   numEnemiesInLevel: 8
   numEnemiesKilled: 0
   score: 0
+  initializedScore: 0
   ScoreNumberText: {fileID: 1536839612}
 --- !u!1001 &1971661089
 PrefabInstance:

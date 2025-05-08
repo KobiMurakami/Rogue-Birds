@@ -656,6 +656,7 @@ MonoBehaviour:
   numEnemiesInLevel: 7
   numEnemiesKilled: 0
   score: 0
+  initializedScore: 0
   ScoreNumberText: {fileID: 1136891217}
 --- !u!114 &701037022
 MonoBehaviour:
@@ -671,9 +672,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelName: Level5Boss
   levelName: Level6
-  currentLevelNumber: 6
+  currentLevelNumber: 5
   scoreManager: {fileID: 701037021}
   loseCondition: 0
+  calledOnce: 0
   winText: {fileID: 1822220217}
   loseText: {fileID: 1836519806}
   nextLevelButton: {fileID: 1822220215}
@@ -3220,3 +3222,4 @@ SceneRoots:
   - {fileID: 2087073539}
   - {fileID: 2007567420}
   - {fileID: 1680420191}
+  - {fileID: 145047580}
