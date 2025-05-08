@@ -6,6 +6,10 @@ public class BombBird : Bird
     [SerializeField] private float explosionForce = 10f;
     [SerializeField] private float explosionRadius = 5f;
     [SerializeField] private GameObject explosionEffect;
+    
+    [Header("Sound Settings")]
+    public AudioClip explodeSound;
+    public float explodeSoundVolume = 1f;
 
     //private Rigidbody2D rb;
 
@@ -25,6 +29,8 @@ public class BombBird : Bird
 
     public override void ActivateAbility()
     {
+        PlayDetachedSound(explodeSound, transform.position, 1.0f, explodeSoundVolume);
+        
         ApplyExplosionForce();
         if (explosionEffect != null)
         {
@@ -60,5 +66,20 @@ public class BombBird : Bird
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
+    
+    //Sound method dealing with bomb boy exploding, 
+    private void PlayDetachedSound(AudioClip clip, Vector3 position, float pitch, float volume)
+    {
+        GameObject tempAudio = new GameObject("TempAudio");
+        tempAudio.transform.position = position;
+
+        AudioSource audioSource = tempAudio.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.pitch = pitch;
+        audioSource.volume = volume;
+        audioSource.Play();
+
+        Destroy(tempAudio, clip.length / pitch);
     }
 }

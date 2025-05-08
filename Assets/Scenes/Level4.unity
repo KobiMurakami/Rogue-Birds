@@ -4518,7 +4518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1cfbf109d9f240abc504b1613f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Level5Boss
+  nextLevelName: Level6
   levelName: Level4
   currentLevelNumber: 4
   scoreManager: {fileID: 1928151927}

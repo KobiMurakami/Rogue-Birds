@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7489283108169010207, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  m_Sprite: {fileID: 1742201622398036786, guid: 92de93066f87de242b882eec86ee97fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae50bfc7ab9d18499048d484b4c0cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 7489283108169010207, guid: a74f641893aeb59469e5498658ea72ed, type: 3}
+  cardSprite: {fileID: 1742201622398036786, guid: 92de93066f87de242b882eec86ee97fa, type: 3}
   perkName: Bird Randomizer
   perkDescription: Randomize your bird bag at the end of each round!
