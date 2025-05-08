@@ -52,8 +52,8 @@ public class BreakableBlock : MonoBehaviour
                     break;
                 case BlockType.Steel:
                     rb.mass = 20f;
-                    rb.linearDamping = 2f;
-                    rb.angularDamping = 2f;
+                    rb.linearDamping = 0.05f;
+                    rb.angularDamping = 0.05f;
                     break;
             }
         }
