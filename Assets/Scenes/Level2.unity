@@ -1069,6 +1069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AbilityGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 2218938831099111671, guid: 012d6fc8630e70f45b36c43f8dd81416, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3193655517277218059, guid: 012d6fc8630e70f45b36c43f8dd81416, type: 3}
       propertyPath: m_Pivot.x
       value: 0
