@@ -1811,17 +1811,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6741246068347260720, guid: 3fa59180694111f488737d76cae2d142, type: 3}
   m_PrefabInstance: {fileID: 618750204}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &618750206 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1216284640781564549, guid: 3fa59180694111f488737d76cae2d142, type: 3}
-  m_PrefabInstance: {fileID: 618750204}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &618750207 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2540852241687200823, guid: 3fa59180694111f488737d76cae2d142, type: 3}
@@ -2738,6 +2727,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+--- !u!114 &958745622 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2932704266679109251, guid: 3f2913aaf6537f64ab4c59564dfb5858, type: 3}
+  m_PrefabInstance: {fileID: 958745621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a224d9315803e2348803396ce114d1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &987224779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3775,17 +3775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1321942515 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2436895132746832484, guid: 15560e8603dff364f88dbbaa6b643fc8, type: 3}
-  m_PrefabInstance: {fileID: 1321942511}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1321942516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9063261071411268513, guid: 15560e8603dff364f88dbbaa6b643fc8, type: 3}
@@ -4250,6 +4239,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8451644738327208318, guid: 9e1d76c6fcb5b074782f474c801430e0, type: 3}
+      propertyPath: slingShot
+      value: 
+      objectReference: {fileID: 958745622}
     - target: {fileID: 8935372996321309482, guid: 9e1d76c6fcb5b074782f474c801430e0, type: 3}
       propertyPath: m_Name
       value: HUDPrefab
@@ -4938,16 +4931,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1cfbf109d9f240abc504b1613f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Level6
-  levelName: Level4
+  nextLevelName: Level5Boss
+  levelName: Level4-Hard
   currentLevelNumber: 4
   scoreManager: {fileID: 1928151927}
   loseCondition: 0
   winText: {fileID: 1321942516}
   loseText: {fileID: 618750208}
   nextLevelButton: {fileID: 1321942514}
-  replayButtonWin: {fileID: 1321942515}
-  replayButtonLose: {fileID: 618750206}
+  replayButtonWin: {fileID: 0}
+  replayButtonLose: {fileID: 0}
   menuButtonWin: {fileID: 1321942513}
   menuButtonLose: {fileID: 618750207}
 --- !u!4 &1928151926
@@ -4977,7 +4970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586ff367333c88646a37bcac22bc82ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numEnemiesInLevel: 7
+  numEnemiesInLevel: 8
   numEnemiesKilled: 0
   score: 0
   ScoreNumberText: {fileID: 1536839612}
