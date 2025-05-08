@@ -67,7 +67,6 @@ public class Projectile : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            //BossBehavior.hasFired = false;
         }
     }
     

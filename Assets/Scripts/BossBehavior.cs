@@ -6,7 +6,7 @@ public class BossBehavior : MonoBehaviour
 {
     [SerializeField]
     private GameObject missilePrefab;
-    public GameObject boss;
+    public static GameObject boss;
     public GameObject missileSpawn;
     //public UnityEvent hasFired;
     
@@ -19,7 +19,7 @@ public class BossBehavior : MonoBehaviour
 
     void Start()
     {
-        
+        boss = gameObject;
     }
     void Update()
     {
@@ -33,11 +33,6 @@ public class BossBehavior : MonoBehaviour
 
         //Reset if bird drops below threshold again
         if (birdHeight <= 5)
-        {
-            hasFired = false;
-        }
-
-        if (GameObject.FindGameObjectWithTag("Bird") == null)
         {
             hasFired = false;
         }
