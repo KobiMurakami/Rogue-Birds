@@ -4372,7 +4372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6bb7f0a1a7e41cc88782ca4d433cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 1001242213}
   fxSource: {fileID: 510160947}
   menuMusic: {fileID: 0}
   gameMusic: {fileID: 0}
